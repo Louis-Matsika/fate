@@ -1,22 +1,26 @@
 import { Outlet, Link } from "react-router-dom";
 
 const Layout = () => {
-  return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Main</Link>
-          </li>
-          <li>
-            <Link to="/Info">info</Link>
-          </li>
-        </ul>
-      </nav>
+	return (
+		<>
+			<header>
+				<a
+					href="https://www.youtube.com/@saisfate"
+					target="_blank"
+					rel="noreferrer"
+					class="header-logo-wrapper"
+				>
+					<img
+						src="utilities/branding/omologo.png"
+						alt="OMO logo"
+						class="header-logo"
+					/>
+				</a>
+			</header>
 
-      <Outlet />
-    </>
-  )
+			<Outlet />
+		</>
+	);
 };
 
 export default Layout;
