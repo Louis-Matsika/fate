@@ -1,38 +1,358 @@
-.App {
-  text-align: center;
+/***************/
+/* DOCUMENT DECLARATIONS */
+/***************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+	font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+	/* font-size: 1.8rem; */
+	font-family: "Rubik", sans-serif;
+	color: #000;
+	line-height: 1;
+
+	background-color: var(--background-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+:root {
+	--text-color: #000;
+	--secondary-text-color: #444;
+	--section-border-color: #d3d3d3;
+	--background-color: #f3f3f3;
+	/* --artist-color: #000; */
 }
 
-.App-link {
-  color: #61dafb;
+/***************/
+/* GENERAL / REUSABLE SELECTORS */
+/***************/
+
+/* FOCUS STATES */
+*:focus {
+	outline: none;
+	border: 5px solid #f16c6c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-logo-wrapper:focus,
+.footer-logo-wrapper:focus {
+	border: 5px solid #f16c6c;
+}
+
+.logo-button-container .logo-button:focus,
+.text-button-container .text-button:focus {
+	border: 5px solid #f16c6c;
+}
+
+/* BIG SELECTORS */
+main {
+	text-align: center;
+	margin: 4.8rem auto 7.2rem auto;
+	width: fit-content;
+}
+
+/* ELEMENTS */
+.music-cover,
+iframe {
+	border: 5px solid var(--text-color);
+	border-radius: 8px;
+	background-color: var(--text-color);
+}
+
+iframe {
+	aspect-ratio: 16/9;
+	width: 51rem;
+}
+
+/* HEADINGS / TITLES */
+.subheading {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: var(--secondary-text-color);
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+}
+
+#subheading--listen-on {
+	color: #c50f0f;
+}
+
+/* BUTTONS */
+.text-button-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	justify-content: center;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.text-button:link,
+.text-button:visited {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.8rem;
+
+	width: 25rem;
+	padding: 1.3rem 2rem;
+	border: 5px solid var(--background-color);
+	border-radius: 12px;
+	background: linear-gradient(to right bottom, #c50f0f 10%, #f01b1b);
+
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: #fff;
+	text-decoration: none;
+}
+
+#social-buttons {
+	border-top: 1px solid var(--section-border-color);
+	padding-top: 2.4rem;
+}
+
+/***************/
+/* HEADER + FOOTER */
+/***************/
+
+/* FULL SECTIONS */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-bottom: 1px solid var(--section-border-color);
+	padding: 1.2rem 0;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-top: 1px solid var(--section-border-color);
+	padding: 4.8rem 0;
+}
+
+/* LOGO WRAPPERS */
+.header-logo-wrapper,
+.footer-logo-wrapper {
+	display: inline-block;
+	border: 5px solid transparent;
+	border-radius: 9px;
+}
+
+.header-logo-wrapper {
+	width: 5rem;
+}
+
+.footer-logo-wrapper--omo {
+	width: 8rem;
+}
+
+.footer-logo-wrapper--weatherstation {
+	width: 6rem;
+}
+
+/* LOGOS */
+.header-logo {
+	width: 100%;
+}
+
+.footer-logo {
+	width: 100%;
+}
+
+/***************/
+/* MAIN CONTENT */
+/***************/
+
+/* MAIN MEDIA */
+.music-cover {
+	width: 25.5rem;
+}
+
+/* TEXT / TITLES */
+#release-title {
+	font-size: 4rem;
+	font-weight: 700;
+	color: #db1616;
+	line-height: 1;
+
+	margin: 2.4rem 0 0.6rem 0;
+}
+
+#creator-title {
+	font-size: 2rem;
+	font-weight: 500;
+
+	margin-bottom: 2.4rem;
+}
+
+/* LISTEN ON SUBSECTION */
+.subsection--listen-on {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+
+	width: fit-content;
+	margin: 0 auto;
+	border-top: 1px solid var(--section-border-color);
+
+	padding: 2.4rem 0;
+}
+
+/* LOGO BUTTONS */
+.logo-button-container {
+	display: flex;
+	gap: 0.6rem;
+	justify-content: center;
+}
+
+.logo-button:link,
+.logo-button:visited {
+	display: flex;
+
+	padding: 0.5rem;
+	border: 5px solid transparent;
+	border-radius: 8px;
+
+	font-size: 3.5rem;
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.logo-button:hover,
+.logo-button:active {
+	color: #fff;
+	background-color: #df1c1c;
+}
+
+/* TEXT BUTTONS */
+.section--main-content .text-button:link,
+.section--main-content .text-button:visited {
+	font-size: 2rem;
+}
+
+/***************/
+/* EXTRA CONTENT */
+/***************/
+
+/* SECTION */
+.section--extra-content {
+	width: fit-content;
+	margin: 0 auto;
+	border-top: 1px solid var(--section-border-color);
+}
+
+#section--extra-content--no-music-page {
+	border-top: 0;
+}
+
+/* SECTION TITLE */
+.section--extra-content .subheading {
+	margin: 4.8rem 0 2.4rem 0;
+}
+
+/* EXTRA SOCIAL PLATFORMS PART */
+.extra-platforms-title {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: var(--secondary-text-color);
+
+	margin-top: 2.4rem;
+}
+
+.section--extra-content .text-button-container {
+	border-bottom: 1px solid var(--section-border-color);
+
+	padding: 0.6rem 0 2.4rem 0;
+}
+
+/***************/
+/* NEWSLETTER */
+/***************/
+
+/* LABEL */
+#newsletter-form .subheading {
+	display: inline-block;
+	margin: 4.8rem 0 2.4rem 0;
+}
+
+/* INPUT + SUBMIT */
+#input-container {
+	display: flex;
+	width: fit-content;
+	margin: 0 auto;
+
+	outline: 5px solid #c50f0f;
+	border-radius: 10px;
+}
+
+#email-input,
+#submit-button {
+	font-family: inherit;
+
+	border: none;
+	padding: 1rem 2rem;
+}
+
+#submit-button {
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: #fff;
+
+	cursor: pointer;
+	background: linear-gradient(to right bottom, #c50f0f 10%, #f01b1b);
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+/* BELOW 864 px */
+@media (max-width: 54em) {
+	/* main {
+		width: 100%;
+	} */
+
+	iframe {
+		max-width: 40rem;
+		margin: 0 auto;
+	}
+}
+
+/* NEEDED FOR HEADER LATER */
+/* BELOW 560px */
+@media (max-width: 35em) {
+	iframe {
+		max-width: 30rem;
+	}
+}
+
+/* BELOW 352px */
+@media (max-width: 22em) {
+	main {
+		padding: 4.8rem 0;
+		margin: 0rem auto;
+	}
+
+	iframe {
+		max-width: 27.5rem;
+	}
+
+	#input-container {
+		margin: 0 2rem;
+	}
+
+	#email-input,
+	#submit-button {
+		padding: 1rem 1.25rem;
+		/* width: 20rem; */
+	}
 }
