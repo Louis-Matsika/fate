@@ -103,7 +103,7 @@ export default function Main() {
 					<img
 						src="utilities/branding/omologo.png"
 						alt="OMO logo"
-						class="footer-logo"
+						class="footer-logo omo-logo"
 						id="footer-logo--omo"
 					/>
 				</a>

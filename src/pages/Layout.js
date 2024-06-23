@@ -13,7 +13,7 @@ const Layout = () => {
 					<img
 						src="utilities/branding/omologo.png"
 						alt="OMO logo"
-						class="header-logo"
+						class="header-logo omo-logo"
 					/>
 				</a>
 			</header>
