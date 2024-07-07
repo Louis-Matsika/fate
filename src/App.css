@@ -5,3 +5,22 @@ body {
 .omo-logo {
 	width: 50px;
 }
+
+.logo-button-container {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.text-button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+a:link,
+a:visited {
+	color: #960000;
+}
