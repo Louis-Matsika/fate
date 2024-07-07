@@ -1,4 +1,5 @@
-import { React, useState } from "react";
+// import { React, useState } from "react";
+import { React } from "react";
 import ExtraMain from "./ExtraMain.js";
 import Newsletter from ".././components/Newsletter.js";
 // import { collection, addDoc } from "firebase/firestore";
@@ -11,7 +12,7 @@ export default function Main() {
 				<section class="section--main-content">
 					<div class="subsection--main-release">
 						<iframe
-							src="https://www.youtube.com/embed/CT5tn7OUqsg?si=kuSqQsbBx7SklBmM"
+							src="https://www.youtube.com/embed/B8ggua3sl5c?si=rg5hpBNLjnMxLt81"
 							title="YouTube video player"
 							frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -22,7 +23,7 @@ export default function Main() {
 							class="music-cover"
 							alt="psalm. by SAI's Fate. cover art"
 						></img> */}
-						<h1 id="release-title">lullaby.</h1>
+						<h1 id="release-title">fnatic.</h1>
 						<p id="creator-title">SAI's fate.</p>
 					</div>
 					<div class="subsection--listen-on">
@@ -103,7 +104,7 @@ export default function Main() {
 					<img
 						src="utilities/branding/omologo.png"
 						alt="OMO logo"
-						class="footer-logo"
+						class="footer-logo omo-logo"
 						id="footer-logo--omo"
 					/>
 				</a>
