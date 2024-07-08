@@ -2,7 +2,7 @@ import { React } from "react";
 export default function ExtraMain() {
 	return (
 		<div>
-			<section class="section--extra-content">
+			<section class="section--extra-content section-divider">
 				<h2 class="subheading">extra content</h2>
 				<iframe
 					src="https://www.youtube.com/embed/_eAsAfFoxtw?si=W8lVtyAUD_K3HPCC"

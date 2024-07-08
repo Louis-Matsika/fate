@@ -1,15 +1,57 @@
+/* DOCUMENT */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	text-align: center;
+}
+
+/* GENERAL */
+a:link,
+a:visited {
+	color: #960000;
 }
 
 .omo-logo {
 	width: 50px;
 }
 
+/* SECTIONS AND DIVIDERS */
+section {
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.section-divider {
+	border-bottom: 1px solid #cacaca;
+}
+
+.section-divider,
+.section--newsletter {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+/* LOGO BUTTONS */
 .logo-button-container {
 	display: flex;
 	justify-content: center;
-	gap: 10px;
+	gap: 15px;
+	margin: 5px 0;
+}
+
+.logo-button {
+	font-size: 40px;
+}
+
+/* TEXT BUTTONS */
+.text-button-container {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
 }
 
 .text-button {
@@ -20,7 +62,10 @@ body {
 	gap: 10px;
 }
 
-a:link,
-a:visited {
-	color: #960000;
+/* EXTRA CONTENT SECTION */
+.section--extra-content .subheading {
+	margin-bottom: 5px;
+}
+.extra-platforms-title {
+	margin: 5px 0;
 }
