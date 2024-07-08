@@ -10,7 +10,7 @@ export default function Main() {
 		<div>
 			<main>
 				<section class="section--main-content">
-					<div class="subsection--main-release">
+					<div class="subsection--main-release section-divider">
 						<iframe
 							src="https://www.youtube.com/embed/B8ggua3sl5c?si=rg5hpBNLjnMxLt81"
 							title="YouTube video player"
@@ -26,7 +26,7 @@ export default function Main() {
 						<h1 id="release-title">fnatic.</h1>
 						<p id="creator-title">SAI's fate.</p>
 					</div>
-					<div class="subsection--listen-on">
+					<div class="subsection--listen-on section-divider">
 						<h2 class="subheading" id="subheading--listen-on">
 							listen on
 						</h2>

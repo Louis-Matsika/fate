@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	text-align: center;
 }
@@ -23,4 +27,13 @@ body {
 a:link,
 a:visited {
 	color: #960000;
+}
+
+section {
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.section-divider {
+	border-bottom: 1px solid #cacaca;
 }
