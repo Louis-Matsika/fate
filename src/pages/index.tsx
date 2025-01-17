@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "#/styles/Home.module.css";
+import ArtistBrand from "#/components/ArtistBrand";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,7 @@ export default function Home() {
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
-          <h1>SAI's fate.</h1>
+          <ArtistBrand />
         </main>
         <footer className={styles.footer}>
           <a
