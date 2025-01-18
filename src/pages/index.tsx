@@ -26,7 +26,7 @@ export default function Home() {
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
-          <h1>SAI's fate.</h1>
+          <h1>SAI&apos;s fate.</h1>
         </main>
         <footer className={styles.footer}>
           <a
