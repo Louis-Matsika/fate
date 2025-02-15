@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.26.8",
+    "@emotion/react": "^11.14.0",
     "babel-runtime": "^6.26.0",
     "next": "15.1.7",
     "react": "^19.0.0",
