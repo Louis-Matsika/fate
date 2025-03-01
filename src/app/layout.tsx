@@ -1,16 +1,16 @@
-// import type { Metadata } from "next";
-import React from 'react';
+"use client";
+/** @jsxImportSource @emotion/react */
+
+import styles from "./index.styles";
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body css={styles.appBody}>{children}</body>
+        </html>
+    );
 }

@@ -1,10 +1,14 @@
-'use client'
+"use client";
 /** @jsxImportSource @emotion/react */
 
 import styles from "./index.styles";
 
 const Header = () => {
-  return <div css={styles.div}>header</div>;
+    return (
+        <header css={styles.header}>
+            <img css={styles.omoBrand} src="/OMOlogo.png" alt="OMOcloud logo" />
+        </header>
+    );
 };
 
 export default Header;
