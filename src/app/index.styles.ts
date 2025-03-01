@@ -1,12 +1,12 @@
 import { css } from "@emotion/react";
 import withThemeProvider from "#/themes/withThemeProvider";
 
-// Define a type for the colours parameter
-type ColoursType = typeof withThemeProvider.colours;
+const { colours, spacings } = withThemeProvider;
 
 export default {
-  div: ({ colours = withThemeProvider.colours }: { colours?: ColoursType }) =>
+  div: () =>
     css({
-      backgroundColor: colours.BLACK,
+      backgroundColor: colours.RED,
+      padding: spacings.FULL,
     }),
 };

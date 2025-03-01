@@ -1,8 +1,11 @@
-import { BLACK } from "./palette";
+//import { BLACK } from "./palette";
 
 const withThemeProvider = {
   colours: {
-    BLACK: `${BLACK}`,
+    RED: "#FF0000",
+  },
+  spacings: {
+    FULL: "8px",
   },
 };
 
