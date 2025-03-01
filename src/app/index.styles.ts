@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
-
-import { colours, spacings } from '#/themes/withThemeProvider'
+import { colours, spacings } from '#/themes/theme'
 
 
 export default {
