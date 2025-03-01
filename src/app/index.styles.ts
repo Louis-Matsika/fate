@@ -1,9 +1,10 @@
-// import { css } from '@emotion/react';
+import {css} from "@emotion/react";
+import {colours, spacings} from "#/themes/theme";
 
-// // eslint-disable-next-line import/no-anonymous-default-export
-// export default {
-//     componentContainer: () =>
-//       css({
-//         justifyContent: 'center',
-//       }),
-//     }
+export default {
+    div: () =>
+        css({
+            backgroundColor: colours.CANVAS,
+            padding: spacings.FULL,
+        }),
+};

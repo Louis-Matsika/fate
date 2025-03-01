@@ -1,10 +1,10 @@
-import React from 'react';
+'use client'
+/** @jsxImportSource @emotion/react */
 
-const Header =()=>{
-    return(
-    <div>
-        header
-    </div>);
-}
+import styles from "./index.styles";
+
+const Header = () => {
+  return <div css={styles.div}>header</div>;
+};
 
 export default Header;
