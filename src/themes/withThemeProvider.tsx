@@ -1,8 +1,10 @@
 import pixelsToRem from "#/utilities/pixelsToRem";
 
 export const colours = {
-    RED: "#FF0000",
-    BLACK: "#000000", // Added BLACK for the example
+    SYSTEMBLUE: "#0E53F3",
+    MIDNIGHT: "#010101",
+    NARDOGREY: "#5F5F5F",
+    CANVAS: "#FFF",
 };
 
 const FULL = pixelsToRem(8);
