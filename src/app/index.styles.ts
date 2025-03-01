@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
-import withThemeProvider from "#/themes/withThemeProvider";
 
-const { colours, spacings } = withThemeProvider;
+import { colours, spacings } from '#/themes/withThemeProvider'
+
 
 export default {
   div: () =>
