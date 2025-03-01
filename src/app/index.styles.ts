@@ -1,10 +1,8 @@
 import {css} from "@emotion/react";
-import {colours, spacings} from "#/themes/theme";
 
 export default {
-    div: () =>
+    appBody: () =>
         css({
-            backgroundColor: colours.CANVAS,
-            padding: spacings.FULL,
+            margin: 0,
         }),
 };

@@ -3,8 +3,8 @@ import pixelsToRem from "#/utilities/pixelsToRem";
 export const colours = {
     SYSTEMBLUE: "#0E53F3",
     MIDNIGHT: "#010101",
-    NARDOGREY: "#5F5F5F",
-    CANVAS: "#FFF",
+    NARDOGREY: "#AAAAAA",
+    CANVAS: "#FFFFFF",
 };
 
 const FULL = pixelsToRem(8);
@@ -33,10 +33,18 @@ export const breakpoints = {
     GROUP_3_COMPUTER: "1000px",
 };
 
+export const pictureWidths = {
+    ICON_SMALL: "25px",
+    ICON_MEDIUM: "50px",
+    ICON_LARGE: "75px",
+    PICTURE_MAIN: "400px",
+};
+
 const theme = {
     colours,
     spacings,
     breakpoints,
+    pictureWidths,
 };
 
 export default theme;
