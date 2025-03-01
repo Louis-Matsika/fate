@@ -1,8 +1,5 @@
 'use client'
-/** @jsxRuntime classic */
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
 
 import styles from "./index.styles";
 
