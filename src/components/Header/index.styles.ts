@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-import withThemeProvider from '#/themes/withThemeProvider';
 
 export default {
     div: () =>
