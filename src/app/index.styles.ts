@@ -1,9 +1,12 @@
-// import { css } from '@emotion/react';
+import { css } from "@emotion/react";
+import withThemeProvider from "#/themes/withThemeProvider";
 
-// // eslint-disable-next-line import/no-anonymous-default-export
-// export default {
-//     componentContainer: () =>
-//       css({
-//         justifyContent: 'center',
-//       }),
-//     }
+// Define a type for the colours parameter
+type ColoursType = typeof withThemeProvider.colours;
+
+export default {
+  div: ({ colours = withThemeProvider.colours }: { colours?: ColoursType }) =>
+    css({
+      backgroundColor: colours.BLACK,
+    }),
+};

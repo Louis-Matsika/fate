@@ -2,6 +2,11 @@
     "extends": ["airbnb", "prettier", "plugin:node/recommended"],
     "plugins": ["prettier"],
     "rules": {
+      "@emotion/jsx-import": "error",
+      "@emotion/no-vanilla": "error",
+      "@emotion/import-from-emotion": "error",
+      "@emotion/styled-import": "error",
+      "import/no-anonymous-default-export": "off",
       "prettier/prettier": "error",
       "no-unused-vars": "warn",
       "no-console": "off",

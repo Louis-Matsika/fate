@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["@emotion/react/types/css-prop"],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -20,7 +21,8 @@
     ],
     "paths": {
       "#/*": ["./src/*"],
-      "#/components/*": ["./src/components/*"]
+      "#/components/*": ["./src/components/*"],
+      "#/themes/*": ["./src/themes/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
