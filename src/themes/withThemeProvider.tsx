@@ -1,5 +1,3 @@
-//import { BLACK } from "./palette";
-
 const withThemeProvider = {
   colours: {
     RED: "#FF0000",
