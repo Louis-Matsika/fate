@@ -11,13 +11,13 @@ const ArtistBrand = () => {
     text: "SAI's fate.",
     speed: 0.2,
     tick: 1,
-    step: 3,
+    step: 0.5,
     scramble: 2,
     overflow: false
   });
 
   return (
-    <h1 ref={ref} />
+    <p ref={ref}><strong>SAI</strong>'s fate.</p>
   );
 };
 
