@@ -37,7 +37,10 @@ export const pictureWidths = {
     ICON_SMALL: "25px",
     ICON_MEDIUM: "50px",
     ICON_LARGE: "75px",
-    PICTURE_MAIN: "400px",
+    PICTURE_0_FLIPPHONE: "200px",
+    PICTURE_1_SMARTPHONE: "250px",
+    PICTURE_2_TABLET: "350px",
+    PICTURE_3_COMPUTER: "500px",
 };
 
 const theme = {

@@ -7,7 +7,7 @@ import styles from "./index.styles";
 const Frame = () => {
     return (
         <div css={styles.frameContainer}>
-            <Image css={styles.art} src="/test-img.jpg" width={500} height={500} alt="Picture of the author" />
+            <img css={styles.art} src="/test-img.jpg" width={500} height={"auto"} alt="Picture of the author" />
         </div>
     );
 };
