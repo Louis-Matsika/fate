@@ -1,0 +1,15 @@
+{
+    "title":"this is something about SAI",
+    
+    "type":"Album",
+
+    "coAuthors":[
+        "www.1.com",
+        "www.2.com"
+    ],
+    
+    "links" :[
+        "www.1.com",
+        "www.2.com"
+    ]
+}
