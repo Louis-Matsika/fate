@@ -2,9 +2,9 @@
 /** @jsxImportSource @emotion/react */
 
 import Header from "#/components/Header/Header";
-import Frame from "#/components/Frame/Frame";
+import Exhibit from "#/components/ExhibitLabel";
 import Footer from "#/components/Footer/Footer";
-import InfoBar from "#/components/InfoBar/InfoBar";
+
 
 import styles from "./index.styles";
 import "./global.css";
@@ -14,8 +14,7 @@ const Home = () => {
         <>
             <Header />
             <main css={styles.main}>
-                <Frame />
-                <InfoBar />
+                <Exhibit />
             </main>
             <Footer />
         </>
