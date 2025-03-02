@@ -2,13 +2,12 @@
 
 import ArtistBrand from "../ArtistBrand";
 
-import styles from "./";
 
-
+import styles from "./index.styles";
 
 const Exhibit = () => {
   return (
-    <div>
+    <div css={styles.label}>
       <ArtistBrand />
     </div>
   );
