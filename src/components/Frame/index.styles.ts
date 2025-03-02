@@ -1,5 +1,5 @@
 import {css} from "@emotion/react";
-import {colours, spacings} from "#/themes/theme";
+import {colours, spacings, breakpoints} from "#/themes/theme";
 
 export default {
     frameContainer: () =>
