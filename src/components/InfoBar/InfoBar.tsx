@@ -2,7 +2,7 @@
 import styles from "./index.styles";
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/featuredMusic', {
+  const res = await fetch('/api/featuredMusic', {
     cache: 'force-cache', // This caches the result
     next: {
       revalidate: 3600 // Revalidate every hour (optional)
