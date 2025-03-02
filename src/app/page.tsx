@@ -7,6 +7,7 @@ import Footer from "#/components/Footer/Footer";
 import InfoBar from "#/components/InfoBar/InfoBar";
 
 import styles from "./index.styles";
+import "./global.css";
 
 const Home = () => {
     return (

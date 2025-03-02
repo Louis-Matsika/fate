@@ -3,6 +3,8 @@ import pixelsToRem from "#/utilities/pixelsToRem";
 export const colours = {
     SYSTEMBLUE: "#0E53F3",
     MIDNIGHT: "#010101",
+    CHARCOAL: "#212121",
+    GRAPHITE: "#333333",
     NARDOGREY: "#AAAAAA",
     CANVAS: "#FFFFFF",
 };
@@ -41,6 +43,15 @@ export const pictureWidths = {
     PICTURE_1_SMARTPHONE: "250px",
     PICTURE_2_TABLET: "350px",
     PICTURE_3_COMPUTER: "500px",
+};
+
+export const fontSizes = {
+    H1: "50px",
+    H2: "30px",
+    H3: "24px",
+    BODY: "16px",
+    SMALLPRINT: "12px",
+    BARCODE: "30px",
 };
 
 const theme = {
