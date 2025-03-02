@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 
-import styles from ".";
+import styles from "./index.styles";
 
 const ArtistBrand = () => {  
-  return <h1>SAI's fate.</h1>;
+  return <h1 css={styles.brand}>SAI's fate.</h1>;
 };
 
 
