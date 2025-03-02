@@ -7,6 +7,10 @@ export default {
             display: "flex",
             justifyContent: "center",
             margin: `${spacings.QUINTUPLE}`,
+
+            [`@media (max-width: ${breakpoints.GROUP_3_COMPUTER})`]: {
+                backgroundColor: `${colours.NARDOGREY}`
+            }
         }),
     art: () =>
         css({
