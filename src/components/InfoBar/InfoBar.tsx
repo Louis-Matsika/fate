@@ -1,23 +1,23 @@
-"use client";
 /** @jsxImportSource @emotion/react */
-
-import { useEffect, useState } from "react";
 import styles from "./index.styles";
 
-const InfoBar = () => {
-  const [music, setMusic] = useState<{ 
-    title?: string; 
-    type?: string }>({});
+async function getData() {
+  const res = await fetch('http://localhost:3000/api/featuredMusic', {
+    cache: 'force-cache', // This caches the result
+    next: {
+      revalidate: 3600 // Revalidate every hour (optional)
+    }
+  });
 
-  useEffect(() => {
-    const fetchMusic = async () => {
-      const res = await fetch("/api/featuredMusic");
-      const data = await res.json();
-      setMusic(data);
-    };
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
 
-    fetchMusic();
-  }, []);
+  return res.json();
+}
+
+async function InfoBar() {
+  const music = await getData();
 
   return (
     <div css={styles.div}>
@@ -26,6 +26,6 @@ const InfoBar = () => {
       <p>{music.type}</p>
     </div>
   );
-};
+}
 
 export default InfoBar;
