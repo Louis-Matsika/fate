@@ -8,8 +8,5 @@ export default {
             justifyContent: "center",
             borderTop: `1px solid ${colours.NARDOGREY}`,
             padding: `${spacings.DOUBLE} 0 ${spacings.DOUBLE} 0`,
-            position: "absolute",
-            bottom: 0,
-            width: "100%",
         }),
 };

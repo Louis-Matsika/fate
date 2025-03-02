@@ -6,15 +6,18 @@ import Frame from "#/components/Frame/Frame";
 import Footer from "#/components/Footer/Footer";
 import InfoBar from "#/components/InfoBar/InfoBar";
 
+import styles from "./index.styles";
+
 const Home = () => {
     return (
-        <div>
+        <>
             <Header />
-            <Frame />
-            <InfoBar />
+            <main css={styles.main}>
+                <Frame />
+                <InfoBar />
+            </main>
             <Footer />
-
-        </div>
+        </>
     );
 };
 
