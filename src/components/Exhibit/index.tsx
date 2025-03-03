@@ -13,14 +13,16 @@ const Exhibit = () => {
       <Frame css={styles.frame} />
       <ArtistBrand css={styles.artistBrand} />
       <div css={styles.infoPlaque}>
-        <h2 css={styles.title}>{featuredMusic.title}</h2>
-        <p css={styles.credits}>{featuredMusic.credit}</p>
+        <h2 css={styles.title}>
+          {featuredMusic.title}
+        </h2>
+        {featuredMusic.credit && (
+          <p css={styles.credits}>
+            {featuredMusic.credit}
+          </p>
+        )}
         <p css={styles.infoDetail}>
-          <img
-            css={styles.infoIcon}
-            src={"/info.png"}
-            alt={"information icon"}
-          />
+          <img css={styles.infoIcon} src="/info.png" alt="information icon" />
           {featuredMusic.description}
         </p>
       </div>

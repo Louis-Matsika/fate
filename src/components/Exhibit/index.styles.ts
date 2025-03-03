@@ -30,6 +30,7 @@ export default {
     css({
       paddingTop: 0,
       margin: 0,
+      color: `${colours.CHARCOAL}`
     }),
   credits: () =>
     css({
@@ -45,5 +46,6 @@ export default {
     css({
       width: "40%",
       color: `${colours.GRAPHITE}`,
+      marginTop: `${spacings.FULL}`
     }),
 };
