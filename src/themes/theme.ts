@@ -39,10 +39,10 @@ export const pictureWidths = {
     ICON_SMALL: "20px",
     ICON_MEDIUM: "50px",
     ICON_LARGE: "75px",
-    PICTURE_0_FLIPPHONE: "200px",
-    PICTURE_1_SMARTPHONE: "250px",
-    PICTURE_2_TABLET: "350px",
-    PICTURE_3_COMPUTER: "400px",
+    PICTURE_0_FLIPPHONE: "140px",
+    PICTURE_1_SMARTPHONE: "200px",
+    PICTURE_2_TABLET: "300px",
+    PICTURE_3_COMPUTER: "350px",
 };
 
 export const fontSizes = {

@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
+import featuredMusic from "#/data/featuredMusic.json";
+
 import Frame from "#/components/Frame";
 import ArtistBrand from "#/components/ArtistBrand";
 
@@ -11,15 +13,15 @@ const Exhibit = () => {
       <Frame css={styles.frame} />
       <ArtistBrand css={styles.artistBrand} />
       <div css={styles.infoPlaque}>
-        <h2 css={styles.title}>falcons.</h2>
-        <p css={styles.credits}>Prod. SAI</p>
+        <h2 css={styles.title}>{featuredMusic.title}</h2>
+        <p css={styles.credits}>{featuredMusic.credit}</p>
         <p css={styles.infoDetail}>
           <img
             css={styles.infoIcon}
             src={"/info.png"}
             alt={"information icon"}
           />
-          'falcons.' is my latest single in a while and is the lead song to my first ever album dropping on the 27th of March
+          {featuredMusic.description}
         </p>
       </div>
     </div>

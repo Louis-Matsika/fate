@@ -1,15 +1,11 @@
 {
-    "title":"this is something about SAI",
-    
-    "type":"Album",
+  "title": "falcons.",
 
-    "coAuthors":[
-        "www.1.com",
-        "www.2.com"
-    ],
-    
-    "links" :[
-        "www.1.com",
-        "www.2.com"
-    ]
+  "type": "Album",
+
+  "credit": "",
+
+  "description": "'falcons.' is my first single in a while, and the lead single to my up coming album dropping on the 27th of March",
+
+  "links": ["www.1.com", "www.2.com"]
 }
