@@ -2454,6 +2454,11 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
+use-scramble@^2.2.15:
+  version "2.2.15"
+  resolved "https://registry.yarnpkg.com/use-scramble/-/use-scramble-2.2.15.tgz#443b41f097000d4b5a67c39c0fd8077b4e6977f7"
+  integrity sha512-3+ngTV6OpkY9JT75FM4JYcspmpP7cd/h0/5KqsMU2jcdBD+SAuBMmLqLu0N3/7t8NsfdwJjD3BBeKtT+qZWKew==
+
 which@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/which/-/which-2.0.2.tgz#7c6a8dd0a636a0327e10b59c9286eee93f3f51b1"

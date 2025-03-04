@@ -4,7 +4,7 @@ export const colours = {
     SYSTEMBLUE: "#0E53F3",
     MIDNIGHT: "#010101",
     CHARCOAL: "#212121",
-    GRAPHITE: "#333333",
+    GRAPHITE: "#555555",
     NARDOGREY: "#AAAAAA",
     CANVAS: "#FFFFFF",
 };
@@ -36,13 +36,13 @@ export const breakpoints = {
 };
 
 export const pictureWidths = {
-    ICON_SMALL: "25px",
+    ICON_SMALL: "20px",
     ICON_MEDIUM: "50px",
     ICON_LARGE: "75px",
-    PICTURE_0_FLIPPHONE: "200px",
-    PICTURE_1_SMARTPHONE: "250px",
-    PICTURE_2_TABLET: "350px",
-    PICTURE_3_COMPUTER: "500px",
+    PICTURE_0_FLIPPHONE: "140px",
+    PICTURE_1_SMARTPHONE: "200px",
+    PICTURE_2_TABLET: "300px",
+    PICTURE_3_COMPUTER: "350px",
 };
 
 export const fontSizes = {
