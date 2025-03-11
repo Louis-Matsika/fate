@@ -1,3 +1,17 @@
+// Colors map
+$colours: (
+  'system-blue': #0E53F3,
+  'midnight': #010101,
+  'charcoal': #212121,
+  'graphite': #555555,
+  'nardo-grey': #AAAAAA,
+  'canvas': #FFFFFF
+);
+
+@function colours($key) {
+  @return map-get($colors, $key);
+}
+
 // Breakpoints map
 $breakpoints: (
   'flipphone': 320px,
