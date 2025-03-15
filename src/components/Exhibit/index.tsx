@@ -1,28 +1,26 @@
-/** @jsxImportSource @emotion/react */
-
 import featuredMusic from "#/data/featuredMusic.json";
 
 import Frame from "#/components/Frame";
 import ArtistBrand from "#/components/ArtistBrand";
 
-import styles from "./index.styles";
+import styles from "./styles.module.scss";
 
 const Exhibit = () => {
   return (
-    <div css={styles.exhibit}>
-      <Frame css={styles.frame} />
-      <ArtistBrand css={styles.artistBrand} />
-      <div css={styles.infoPlaque}>
-        <h2 css={styles.title}>
+    <div className={styles.exhibit}>
+      <Frame />
+      <ArtistBrand />
+      <div className={styles.infoPlaque}>
+        <h2 className={styles.title}>
           {featuredMusic.title}
         </h2>
         {featuredMusic.credit && (
-          <p css={styles.credits}>
+          <p className={styles.credits}>
             {featuredMusic.credit}
           </p>
         )}
-        <p css={styles.infoDetail}>
-          <img css={styles.infoIcon} src="/info.png" alt="information icon" />
+        <p className={styles.infoDetail}>
+          <img className={styles.infoIcon} src="/info.png" alt="information icon" />
           {featuredMusic.description}
         </p>
       </div>
