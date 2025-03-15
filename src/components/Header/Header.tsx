@@ -1,6 +1,3 @@
-"use client";
-/** @jsxImportSource @emotion/react */
-
 import styles from "./styles.module.scss";
 
 const Header = () => {

@@ -1,0 +1,18 @@
+@use '../../themes/theme.scss' as theme;
+
+.footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid theme.palette('nardo-grey');
+    padding: theme.spacing('double') 0 theme.spacing('double') 0;
+}
+
+.link {
+    text-decoration: none;
+    font-size: theme.font('barcode');
+    color: theme.palette('graphite');
+
+    &:hover {
+        color: theme.palette('charcoal');
+    }
+}

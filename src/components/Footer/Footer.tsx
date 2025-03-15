@@ -1,12 +1,9 @@
-"use client";
-/** @jsxImportSource @emotion/react */
-
-import styles from "./index.styles";
+import styles from "./styles.module.scss";
 
 const Footer = () => {
     return (
-        <footer css={styles.footer}>
-            <a css={styles.link} href="https://github.com/Louis-Matsika/fate">
+        <footer className={styles.footer}>
+            <a className={styles.link} href="https://github.com/Louis-Matsika/fate">
                 SAI's fate. repo
             </a>
         </footer>
