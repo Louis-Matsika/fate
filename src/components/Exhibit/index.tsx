@@ -8,8 +8,8 @@ import styles from "./styles.module.scss";
 const Exhibit = () => {
   return (
     <div className={styles.exhibit}>
-      <Frame className={styles.frame} />
-      <ArtistBrand className={styles.frame}/>
+      <Frame />
+      <ArtistBrand />
       <div className={styles.infoPlaque}>
         <h2 className={styles.title}>
           {featuredMusic.title}
