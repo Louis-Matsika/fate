@@ -1,17 +1,24 @@
 import styles from "./styles.module.scss";
 
-const MusicButton = () => {
+import singles from "#/data/discography/singles.json";
+
+import { MusicButtonProps, DistroBarProps } from "./types";
+
+const MusicButton = ({ link }: MusicButtonProps) => {
   return (
-    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-      button
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      {link}
     </a>
   );
 };
 
-const DistroBar = () => {
+const DistroBar = ({ id }: DistroBarProps) => {
+  const single = singles.find((index) => index.id === id)
+  console.log(single);
+
   return (
     <div className={styles.distroBar}>
-      <MusicButton />
+      <MusicButton  link={single.links[0]}/>
     </div>
   );
 };

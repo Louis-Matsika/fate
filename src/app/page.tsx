@@ -13,7 +13,7 @@ const Home = () => {
             <Header />
             <main className={styles.main}>
                 <Exhibit />
-                <DistroBar/>
+                <DistroBar id="falcons"/>
             </main>
             <Footer />
         </>
