@@ -1,0 +1,7 @@
+@use "../../themes/theme" as theme;
+
+.distroBar {
+  display: flex;
+  justify-content: center;
+  padding: theme.spacing("double") 0 theme.spacing("double") 0;
+}
