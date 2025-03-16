@@ -1,12 +1,18 @@
 [
-        {
-            "id":"falcons",
-            "title":"falcons",
-            "releaseDate":"20-03-2025",
-            "description": "'falcons.' is my first single in a while, and the lead single to my up coming album dropping on the 27th of March","links": ["www.example.com", "www.example.com"]
-        },
-        {
-            "name":"single 2",
-            "releaseDate":"2002-02-02"
-        }
+  {
+    "id": "falcons",
+    "title": "falcons",
+    "releaseDate": "20-03-2025",
+    "description": "'falcons.' is my first single in a while, and the lead single to my up coming album dropping on the 27th of March",
+    "links": [
+      { "platform": "spotify", "link": "www.example.com" },
+      { "platform": "soundcloud", "link": "www.example.com" },
+      { "platform": "youtube", "link": "www.example.com" },
+      { "platform": "applemusic", "link": "www.example.com" }
     ]
+  },
+  {
+    "name": "single 2",
+    "releaseDate": "2002-02-02"
+  }
+]

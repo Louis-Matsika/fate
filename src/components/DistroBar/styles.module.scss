@@ -1,7 +1,36 @@
 @use "../../themes/theme" as theme;
 
+.MusicButton {
+  width: 100px;
+  
+  img {
+    width: theme.picture-widths("icon-small");
+  }
+
+  .flare {
+    border-bottom: 5px solid theme.palette("system-blue");
+  }
+
+  .spotify{
+    border-bottom: 5px solid theme.palette("spotify");
+  }
+
+  .soundcloud{
+    border-bottom: 5px solid theme.palette("soundcloud");
+  }
+
+  .youtube{
+    border-bottom: 5px solid theme.palette("youtube");
+  }
+
+  .applemusic{
+    border-bottom: 5px solid theme.palette("applemusic");
+  }
+}
+
 .distroBar {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: theme.spacing("double") 0 theme.spacing("double") 0;
 }
