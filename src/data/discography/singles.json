@@ -5,10 +5,10 @@
     "releaseDate": "20-03-2025",
     "description": "'falcons.' is my first single in a while, and the lead single to my up coming album dropping on the 27th of March",
     "links": [
-      { "platform": "spotify", "link": "www.example.com" },
-      { "platform": "soundcloud", "link": "www.example.com" },
-      { "platform": "youtube", "link": "www.example.com" },
-      { "platform": "applemusic", "link": "www.example.com" }
+      { "platform": "spotify", "link": "https://example.com/" },
+      { "platform": "youtube", "link": "https://example.com/" },
+      { "platform": "soundcloud", "link": "https://example.com/" },
+      { "platform": "applemusic", "link": "https://example.com/" }
     ]
   },
   {

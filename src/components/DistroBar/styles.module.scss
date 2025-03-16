@@ -1,10 +1,11 @@
 @use "../../themes/theme" as theme;
 
 .MusicButton {
-  width: 100px;
-  
+
+
   img {
-    width: theme.picture-widths("icon-small");
+    width: theme.picture-widths("icon-medium");
+    padding: theme.spacing("full");
   }
 
   .flare {
@@ -30,7 +31,7 @@
 
 .distroBar {
   display: flex;
-  flex-direction: column;
+  flex-direction: 'inline';
   justify-content: center;
   padding: theme.spacing("double") 0 theme.spacing("double") 0;
 }
