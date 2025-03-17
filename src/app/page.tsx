@@ -3,9 +3,9 @@ import Exhibit from "#/components/Exhibit";
 import Footer from "#/components/Footer/Footer";
 import DistroBar from "#/components/DistroBar";
 
-
-import styles from "./styles.module.scss";
 import "#/themes/global.scss";
+import styles from "./styles.module.scss";
+
 
 const Home = () => {
     return (
