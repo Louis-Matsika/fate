@@ -3,7 +3,6 @@ import Exhibit from "#/components/Exhibit";
 import Footer from "#/components/Footer/Footer";
 import DistroBar from "#/components/DistroBar";
 
-import "#/themes/global.scss";
 import styles from "./styles.module.scss";
 
 
