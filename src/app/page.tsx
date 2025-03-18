@@ -1,11 +1,11 @@
 import Header from "#/components/Header/Header";
 import Exhibit from "#/components/Exhibit";
 import Footer from "#/components/Footer/Footer";
-import MusicButton from "#/components/MusicButton/Header";
+import DistroBar from "#/components/DistroBar";
 
-
+import "./global.css"
 import styles from "./styles.module.scss";
-import "#/themes/global.scss";
+
 
 const Home = () => {
     return (
@@ -13,7 +13,7 @@ const Home = () => {
             <Header />
             <main className={styles.main}>
                 <Exhibit />
-                <MusicButton/>
+                <DistroBar id="falcons"/>
             </main>
             <Footer />
         </>

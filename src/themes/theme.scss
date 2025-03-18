@@ -5,7 +5,13 @@ $palette: (
   'charcoal': #212121,
   'graphite': #555555,
   'nardo-grey': #AAAAAA,
-  'canvas': #FFFFFF
+  'canvas': #FFFFFF,
+  // Brand colors
+  'spotify': #1DB954, // Spotify's brand green
+  'youtube': #FF0000, // YouTube's brand red
+  'soundcloud': #FF8800, // SoundCloud's brand orange
+  'applemusic': #FA243C, // Apple Music's brand pink
+  
 );
 
 @function palette($key) {
@@ -44,8 +50,8 @@ $breakpoints: (
 
 // Picture widths map
 $picture-widths: (
-  'icon-small': 20px,
-  'icon-medium': 50px,
+  'icon-small': 15px,
+  'icon-medium': 35px,
   'icon-large': 75px,
   'flipphone': 140px,
   'smartphone': 200px,
