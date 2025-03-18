@@ -6,6 +6,11 @@
   img {
     width: theme.picture-widths("icon-medium");
     padding: theme.spacing("full");
+
+    // Small mobile
+  @media (max-width: theme.breakpoint('flipphone')) {
+    width: theme.picture-widths('icon-small');
+  }
   }
 
   .flare {
