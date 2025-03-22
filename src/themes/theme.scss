@@ -11,8 +11,10 @@ $palette: (
   'youtube': #FF0000, // YouTube's brand red
   'soundcloud': #FF8800, // SoundCloud's brand orange
   'applemusic': #FA243C, // Apple Music's brand pink
-  
 );
+
+$palette: #0E53F3;
+
 
 @function palette($key) {
   @return map-get($palette, $key);
