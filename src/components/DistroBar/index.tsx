@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-import singles from "#/data/discography/singles.json";
+import music from "#/data/music/discography.json";
 
 import { MusicButtonProps, DistroBarProps } from "./types";
 
@@ -16,7 +16,7 @@ const MusicButton = ({ link, platform }: MusicButtonProps) => {
 };
 
 const DistroBar = ({ id }: DistroBarProps) => {
-  const single = singles.find((index) => index.id === id);
+  const single = music.find((index) => index.id === id);
   console.log(single);
 
   return (

@@ -1,4 +1,4 @@
-import featuredMusic from "#/data/featuredMusic.json";
+import featuredMusic from "#/data/music/featuredMusic.json";
 
 import Frame from "#/components/Frame";
 import ArtistBrand from "#/components/ArtistBrand";
