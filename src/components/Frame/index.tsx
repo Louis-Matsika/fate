@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 const Frame = () => {
     return (
         <div className={styles.frameContainer}>
-            <img className={styles.art} src="/falconsart.png" height={"auto"} alt="Picture of the author" />
+            <img className={styles.art} src="/systemsthinking.png" height={"auto"} alt="Picture of the author" />
         </div>
     );
 };
