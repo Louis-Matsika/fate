@@ -4,10 +4,7 @@ import Frame from "#/components/Frame";
 import ArtistBrand from "#/components/ArtistBrand";
 
 import styles from "./styles.module.scss";
-
-type ExhibitProps = {
-  id: string;
-}
+import { ExhibitProps } from "./types";
 
 const Exhibit = ({ id }: ExhibitProps) => {
   const featured = discography.find((index) => index.id === id);
