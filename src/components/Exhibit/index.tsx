@@ -20,12 +20,12 @@ const Exhibit = ({ id }: ExhibitProps) => {
       <div className={styles.infoPlaque}>
         <h2 className={styles.title}>
           {featured?.title}
-        </h2>
-        {featured?.credit && (
+        </h2> 
+        {/* {featured?.credit && (
           <p className={styles.credits}>
             {featured?.credit}
           </p>
-        )}
+        )} */}
         <p className={styles.infoDetail}>
           <img className={styles.infoIcon} src="/info.png" alt="information icon" />
           {featured?.description}
