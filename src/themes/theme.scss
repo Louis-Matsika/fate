@@ -54,9 +54,9 @@ $picture-widths: (
   'icon-medium': 35px,
   'icon-large': 75px,
   'flipphone': 140px,
-  'smartphone': 200px,
-  'tablet': 300px,
-  'computer': 350px
+  'smartphone': 300px,
+  'tablet': 450px,
+  'computer': 600px
 );
 
 @function picture-widths($key) {
