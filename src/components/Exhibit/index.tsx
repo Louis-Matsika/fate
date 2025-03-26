@@ -9,7 +9,7 @@ import { ExhibitProps } from "./types";
 const Exhibit = ({ id }: ExhibitProps) => {
   const featured = discography.find((index) => index.id === id);
 
-  console.log(featured)
+  // console.log(featured)
   return (
     <div className={styles.exhibit}>
       <Frame />
