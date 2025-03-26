@@ -1,23 +1,16 @@
 [
   {
-    "name":"1",
-    "releaseDate":"2001-01-01",
-
-    "tracks":[
-        "track 1",
-        "track 2",
-        "track 3",
-        "track 4",
-        "track 5",
-        "track 6",
-        "track 7",
-        "track 8",
-        "track 9",
-        "track 10",
-        "track 11",
-        "track 12"
+    "id": "SYSTEMSTHINKING",
+    "title": "SYSTEMS THINKING",
+    "releaseDate": "20-03-2025",
+    "description": "'falcons.' is my first single in a while, and the lead single to my up coming album dropping on the 27th of March",
+    "links": [
+      { "platform": "spotify", "link": "https://open.spotify.com/track/66AVNWUBHvP2wTW0Rb4Gvg?si=ae9ab165d68947e7" },
+      { "platform": "youtube", "link": "https://music.youtube.com/watch?v=t91YfoPSnLo&si=70rr8YwG-mvbA8pf" },
+      { "platform": "soundcloud", "link": "https://soundcloud.com/saisfate/falconsdoors?si=94a4e3b2afab483784b7a230f76534a6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
+      { "platform": "applemusic", "link": "https://music.apple.com/us/album/falcondoors-single/1802783237" }
     ]
-},
+  },
   {
     "id": "falcons",
     "title": "falconDoors.",

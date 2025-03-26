@@ -1,27 +1,34 @@
-import featuredMusic from "#/data/music/featuredMusic.json";
+import discography from "#/data/music/discography.json";
 
 import Frame from "#/components/Frame";
 import ArtistBrand from "#/components/ArtistBrand";
 
 import styles from "./styles.module.scss";
 
-const Exhibit = () => {
+type ExhibitProps = {
+  id: string;
+}
+
+const Exhibit = ({ id }: ExhibitProps) => {
+  const featured = discography.find((index) => index.id === id);
+
+  console.log(featured)
   return (
     <div className={styles.exhibit}>
       <Frame />
       <ArtistBrand />
       <div className={styles.infoPlaque}>
         <h2 className={styles.title}>
-          {featuredMusic.title}
+          {featured?.title}
         </h2>
-        {featuredMusic.credit && (
+        {featured?.credit && (
           <p className={styles.credits}>
-            {featuredMusic.credit}
+            {featured?.credit}
           </p>
         )}
         <p className={styles.infoDetail}>
           <img className={styles.infoIcon} src="/info.png" alt="information icon" />
-          {featuredMusic.description}
+          {featured?.description}
         </p>
       </div>
     </div>

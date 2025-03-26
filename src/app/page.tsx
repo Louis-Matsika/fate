@@ -12,8 +12,8 @@ const Home = () => {
         <>
             <Header />
             <main className={styles.main}>
-                <Exhibit />
-                <DistroBar id="falcons"/>
+                <Exhibit id="SYSTEMSTHINKING"/>
+                <DistroBar id="SYSTEMSTHINKING"/>
             </main>
             <Footer />
         </>
