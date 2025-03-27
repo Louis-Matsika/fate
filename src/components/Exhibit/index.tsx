@@ -1,4 +1,5 @@
 import discography from "#/data/music/discography.json";
+import DistroBar from "#/components/DistroBar";
 
 import Frame from "#/components/Frame";
 import ArtistBrand from "#/components/ArtistBrand";
@@ -18,6 +19,7 @@ const Exhibit = ({ id }: ExhibitProps) => {
         <h2 className={styles.title}>
           {featured?.title}
         </h2> 
+        <DistroBar id="SYSTEMSTHINKING"/>
         {/* {featured?.credit && (
           <p className={styles.credits}>
             {featured?.credit}
