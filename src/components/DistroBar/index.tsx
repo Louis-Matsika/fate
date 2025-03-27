@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-import singles from "#/data/discography/singles.json";
+import discography from "#/data/music/discography.json";
 
 import { MusicButtonProps, DistroBarProps } from "./types";
 
@@ -8,7 +8,10 @@ const MusicButton = ({ link, platform }: MusicButtonProps) => {
   return (
     <div className={styles.MusicButton}>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={`external-brands/${platform}-icon.svg`} alt="test" />
+        <img
+          src={`external-brands/${platform}-icon.svg`}
+          alt={`${platform} logo`}
+        />
         <div className={`${styles.flare} ${styles[platform]}`}></div>
       </a>
     </div>
@@ -16,7 +19,7 @@ const MusicButton = ({ link, platform }: MusicButtonProps) => {
 };
 
 const DistroBar = ({ id }: DistroBarProps) => {
-  const single = singles.find((index) => index.id === id);
+  const single = discography.find((index) => index.id === id);
   console.log(single);
 
   return (
