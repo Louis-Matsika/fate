@@ -11,6 +11,7 @@ $palette: (
   'youtube': #FF0000, // YouTube's brand red
   'soundcloud': #FF8800, // SoundCloud's brand orange
   'applemusic': #FA243C, // Apple Music's brand pink
+  'bandcamp': #17A0C4, // Bandcamp's brand aqua/teal
   
 );
 
@@ -50,7 +51,7 @@ $breakpoints: (
 
 // Picture widths map
 $picture-widths: (
-  'icon-small': 15px,
+  'icon-small': 20px,
   'icon-medium': 35px,
   'icon-large': 75px,
   'flipphone': 140px,
