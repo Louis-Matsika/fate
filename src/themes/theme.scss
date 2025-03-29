@@ -15,12 +15,16 @@ $palette: (
   
 );
 
+$SYSTEM-BLUE: #0E53F3;
+
+
 @function palette($key) {
   @return map-get($palette, $key);
 }
 
 // spacings
 $spacing-base: 0.5rem;  // 8px
+$FULL: $spacing-base;
 
 // Spacings map
 $spacings: (
