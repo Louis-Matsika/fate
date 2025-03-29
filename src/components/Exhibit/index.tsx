@@ -1,27 +1,33 @@
-import featuredMusic from "#/data/featuredMusic.json";
+import discography from "#/data/music/discography.json";
+import DistroBar from "#/components/DistroBar";
 
 import Frame from "#/components/Frame";
 import ArtistBrand from "#/components/ArtistBrand";
 
 import styles from "./styles.module.scss";
+import { ExhibitProps } from "./types";
 
-const Exhibit = () => {
+const Exhibit = ({ id }: ExhibitProps) => {
+  const featured = discography.find((index) => index.id === id);
+
+  // console.log(featured)
   return (
     <div className={styles.exhibit}>
       <Frame />
       <ArtistBrand />
       <div className={styles.infoPlaque}>
         <h2 className={styles.title}>
-          {featuredMusic.title}
-        </h2>
-        {featuredMusic.credit && (
+          {featured?.title}
+        </h2> 
+        <DistroBar id="SYSTEMSTHINKING"/>
+        {/* {featured?.credit && (
           <p className={styles.credits}>
-            {featuredMusic.credit}
+            {featured?.credit}
           </p>
-        )}
+        )} */}
         <p className={styles.infoDetail}>
           <img className={styles.infoIcon} src="/info.png" alt="information icon" />
-          {featuredMusic.description}
+          {featured?.description}
         </p>
       </div>
     </div>

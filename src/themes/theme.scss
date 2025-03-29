@@ -11,6 +11,8 @@ $palette: (
   'youtube': #FF0000, // YouTube's brand red
   'soundcloud': #FF8800, // SoundCloud's brand orange
   'applemusic': #FA243C, // Apple Music's brand pink
+  'bandcamp': #17A0C4, // Bandcamp's brand aqua/teal
+  
 );
 
 $SYSTEM-BLUE: #0E53F3;
@@ -53,13 +55,13 @@ $breakpoints: (
 
 // Picture widths map
 $picture-widths: (
-  'icon-small': 15px,
+  'icon-small': 20px,
   'icon-medium': 35px,
   'icon-large': 75px,
   'flipphone': 140px,
-  'smartphone': 200px,
-  'tablet': 300px,
-  'computer': 350px
+  'smartphone': 300px,
+  'tablet': 450px,
+  'computer': 600px
 );
 
 @function picture-widths($key) {

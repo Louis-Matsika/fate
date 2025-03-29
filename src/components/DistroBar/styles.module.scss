@@ -32,6 +32,10 @@
   .applemusic{
     border-bottom: 5px solid theme.palette("applemusic");
   }
+
+  .bandcamp{
+    border-bottom: 5px solid theme.palette("bandcamp");
+  }
 }
 
 .distroBar {
@@ -39,4 +43,5 @@
   flex-direction: 'inline';
   justify-content: center;
   padding: theme.spacing("double") 0 theme.spacing("double") 0;
+  padding-bottom: theme.spacing("sextuple");
 }
