@@ -1,18 +1,18 @@
-@use '../../themes/theme.scss' as theme;
+@use "../../themes/theme.scss" as theme;
 
 .footer {
     display: flex;
     justify-content: center;
-    border-top: 1px solid theme.palette('nardo-grey');
-    padding: theme.spacing('double') 0 theme.spacing('double') 0;
+    border-top: 1px solid theme.$NARDO-GREY;
+    padding: theme.$DOUBLE 0 theme.$DOUBLE 0;
 }
 
 .link {
     text-decoration: none;
-    font-size: theme.font('barcode');
-    color: theme.palette('graphite');
+    font-size: theme.$BARCODE;
+    color: theme.$GRAPHITE;
 
     &:hover {
-        color: theme.palette('charcoal');
+        color: theme.$CHARCOAL;
     }
 }

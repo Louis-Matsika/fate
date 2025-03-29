@@ -1,36 +1,36 @@
-@use '../../themes/theme' as theme;
+@use "../../themes/theme" as theme;
 
 .frameContainer {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .art {
-  border: 1px solid theme.palette('nardo-grey');
-  border-radius: theme.spacing('full');
+    border: 1px solid theme.$NARDO-GREY;
+    border-radius: theme.$FULL;
 
-  // Desktop/Large screens
-  @media (min-width: theme.breakpoint('computer')) {
-    width: theme.picture-widths('computer');
-  }
+    // Desktop/Large screens
+    @media (min-width: theme.$COMPUTER) {
+        width: theme.$COMPUTER;
+    }
 
-  // Small desktop/Large tablet
-  @media (min-width: theme.breakpoint('tablet')) and (max-width: theme.breakpoint('computer')) {
-    width: theme.picture-widths('computer');
-  }
+    // Small desktop/Large tablet
+    @media (min-width: theme.$TABLET) and (max-width: theme.$COMPUTER) {
+        width: theme.$COMPUTER;
+    }
 
-  // Tablet
-  @media (min-width: theme.breakpoint('smartphone')) and (max-width: theme.breakpoint('tablet')) {
-    width: theme.picture-widths('tablet');
-  }
+    // Tablet
+    @media (min-width: theme.$SMARTPHONE) and (max-width: theme.$TABLET) {
+        width: theme.$TABLET;
+    }
 
-  // Large mobile
-  @media (min-width: theme.breakpoint('flipphone')) and (max-width: theme.breakpoint('smartphone')) {
-    width: theme.picture-widths('smartphone');
-  }
+    // Large mobile
+    @media (min-width: theme.$FLIPPHONE) and (max-width: theme.$SMARTPHONE) {
+        width: theme.$SMARTPHONE;
+    }
 
-  // Small mobile
-  @media (max-width: theme.breakpoint('flipphone')) {
-    width: theme.picture-widths('flipphone');
-  }
+    // Small mobile
+    @media (max-width: theme.$FLIPPHONE) {
+        width: theme.$FLIPPHONE;
+    }
 }

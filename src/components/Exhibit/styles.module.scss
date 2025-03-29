@@ -1,57 +1,50 @@
-@use '../../themes/theme.scss' as theme;
+@use "../../themes/theme.scss" as theme;
 
-.exhibit {  
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: theme.$FULL;
+.exhibit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: theme.$FULL;
 }
 
 .frame {
-  margin-bottom: 400px;
-  background-color: #e00a5a;
+    margin-bottom: 400px;
+    background-color: #e00a5a;
 }
 
 .infoPlaque {
-  padding-bottom: theme.spacing('quadruple');
-  margin: 0;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+    padding-bottom: theme.$QUADRUPLE;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .title {
-  padding-top: 0;
-  padding-bottom:  theme.spacing('full');;
-  margin: 0;
-  color: theme.palette('far');
+    padding-top: 0;
+    padding-bottom: theme.$FULL;
+    margin: 0;
 }
 
 .credits {
-  padding-top: 0;
-  margin: 0;
+    padding-top: 0;
+    margin: 0;
 }
 
 .infoIcon {
-  width: theme.picture-widths('icon-small');
-  margin-right: 4px;
+    width: theme.$ICON-SMALL;
+    margin-right: 4px;
 }
 
 .infoDetail {
-  width: 70%;
-  color: theme.palette('');
-  margin-top: theme.spacing('full');
-  white-space: pre-line;
-  text-align: justify;
-  text-justify: inter-word;
+    width: 70%;
+    margin-top: theme.$FULL;
+    white-space: pre-line;
+    text-align: justify;
+    text-justify: inter-word;
 
-
-  
-
-  @media (min-width: theme.breakpoint('computer')) {
-    width: 33%;
-  }
-
-
+    @media (min-width: theme.$COMPUTER) {
+        width: 33%;
+    }
 }

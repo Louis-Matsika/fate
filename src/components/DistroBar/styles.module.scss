@@ -1,47 +1,45 @@
 @use "../../themes/theme" as theme;
 
 .MusicButton {
+    img {
+        width: theme.$ICON-MEDIUM;
+        padding: theme.$FULL;
 
+        // Small mobile
+        @media (max-width: theme.$FLIPPHONE) {
+            width: theme.$ICON-SMALL;
+        }
+    }
 
-  img {
-    width: theme.picture-widths("icon-medium");
-    padding: theme.spacing("full");
+    .flare {
+        border-bottom: 5px solid theme.$SYSTEM-BLUE;
+    }
 
-    // Small mobile
-  @media (max-width: theme.breakpoint('flipphone')) {
-    width: theme.picture-widths('icon-small');
-  }
-  }
+    .spotify {
+        border-bottom: 5px solid theme.$SPOTIFY;
+    }
 
-  .flare {
-    border-bottom: 5px solid theme.palette("system-blue");
-  }
+    .soundcloud {
+        border-bottom: 5px solid theme.$SOUNDCLOUD;
+    }
 
-  .spotify{
-    border-bottom: 5px solid theme.palette("spotify");
-  }
+    .youtube {
+        border-bottom: 5px solid theme.$YOUTUBE;
+    }
 
-  .soundcloud{
-    border-bottom: 5px solid theme.palette("soundcloud");
-  }
+    .applemusic {
+        border-bottom: 5px solid theme.$APPLEMUSIC;
+    }
 
-  .youtube{
-    border-bottom: 5px solid theme.palette("youtube");
-  }
-
-  .applemusic{
-    border-bottom: 5px solid theme.palette("applemusic");
-  }
-
-  .bandcamp{
-    border-bottom: 5px solid theme.palette("bandcamp");
-  }
+    .bandcamp {
+        border-bottom: 5px solid theme.$BANDCAMP;
+    }
 }
 
 .distroBar {
-  display: flex;
-  flex-direction: 'inline';
-  justify-content: center;
-  padding: theme.spacing("double") 0 theme.spacing("double") 0;
-  padding-bottom: theme.spacing("sextuple");
+    display: flex;
+    flex-direction: "inline";
+    justify-content: center;
+    padding: theme.$DOUBLE 0 theme.$DOUBLE 0;
+    padding-bottom: theme.$SEXTUPLE;
 }

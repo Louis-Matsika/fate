@@ -1,12 +1,12 @@
-@use '../../themes/theme' as theme;
+@use "../../themes/theme" as theme;
 
 .header {
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px solid theme.palette('nardo-grey');
-  padding: theme.spacing('double') 0 theme.spacing('double') 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid theme.$NARDO-GREY;
+    padding: theme.$DOUBLE 0 theme.$DOUBLE 0;
 }
 
 .omoBrand {
-  width: theme.picture-widths('icon-small');
+    width: theme.$ICON-SMALL;
 }
