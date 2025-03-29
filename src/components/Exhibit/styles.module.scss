@@ -1,10 +1,12 @@
-@use "../../themes/theme.scss" as theme;
+@use "../../themes/spacings" as spacings;
+@use "../../themes/picture-widths" as picture-widths;
+@use "../../themes/breakpoints" as breakpoints;
 
 .exhibit {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: theme.$FULL;
+    padding-top: spacings.$FULL;
 }
 
 .frame {
@@ -13,7 +15,7 @@
 }
 
 .infoPlaque {
-    padding-bottom: theme.$QUADRUPLE;
+    padding-bottom: spacings.$QUADRUPLE;
     margin: 0;
     text-align: center;
     display: flex;
@@ -23,7 +25,7 @@
 
 .title {
     padding-top: 0;
-    padding-bottom: theme.$FULL;
+    padding-bottom: spacings.$FULL;
     margin: 0;
 }
 
@@ -33,18 +35,18 @@
 }
 
 .infoIcon {
-    width: theme.$ICON-SMALL;
+    width: picture-widths.$ICON-SMALL;
     margin-right: 4px;
 }
 
 .infoDetail {
     width: 70%;
-    margin-top: theme.$FULL;
+    margin-top: spacings.$FULL;
     white-space: pre-line;
     text-align: justify;
     text-justify: inter-word;
 
-    @media (min-width: theme.$COMPUTER) {
+    @media (min-width: breakpoints.$COMPUTER) {
         width: 33%;
     }
 }

@@ -1,18 +1,20 @@
-@use "../../themes/theme.scss" as theme;
+@use "../../themes/spacings" as spacings;
+@use "../../themes/palette" as palette;
+@use "../../themes/font-sizes" as font-sizes;
 
 .footer {
     display: flex;
     justify-content: center;
-    border-top: 1px solid theme.$NARDO-GREY;
-    padding: theme.$DOUBLE 0 theme.$DOUBLE 0;
+    border-top: 1px solid palette.$NARDO-GREY;
+    padding: spacings.$DOUBLE 0 spacings.$DOUBLE 0;
 }
 
 .link {
     text-decoration: none;
-    font-size: theme.$BARCODE;
-    color: theme.$GRAPHITE;
+    font-size: font-sizes.$BARCODE;
+    color: palette.$GRAPHITE;
 
     &:hover {
-        color: theme.$CHARCOAL;
+        color: palette.$CHARCOAL;
     }
 }

@@ -1,38 +1,41 @@
-@use "../../themes/theme" as theme;
+@use "../../themes/spacings" as spacings;
+@use "../../themes/palette" as palette;
+@use "../../themes/picture-widths" as picture-widths;
+@use "../../themes/breakpoints" as breakpoints;
 
 .MusicButton {
     img {
-        width: theme.$ICON-MEDIUM;
-        padding: theme.$FULL;
+        width: picture-widths.$ICON-MEDIUM;
+        padding: spacings.$FULL;
 
         // Small mobile
-        @media (max-width: theme.$FLIPPHONE) {
-            width: theme.$ICON-SMALL;
+        @media (max-width: breakpoints.$FLIPPHONE) {
+            width: picture-widths.$ICON-SMALL;
         }
     }
 
     .flare {
-        border-bottom: 5px solid theme.$SYSTEM-BLUE;
+        border-bottom: 5px solid palette.$SYSTEM-BLUE;
     }
 
     .spotify {
-        border-bottom: 5px solid theme.$SPOTIFY;
+        border-bottom: 5px solid palette.$SPOTIFY;
     }
 
     .soundcloud {
-        border-bottom: 5px solid theme.$SOUNDCLOUD;
+        border-bottom: 5px solid palette.$SOUNDCLOUD;
     }
 
     .youtube {
-        border-bottom: 5px solid theme.$YOUTUBE;
+        border-bottom: 5px solid palette.$YOUTUBE;
     }
 
     .applemusic {
-        border-bottom: 5px solid theme.$APPLEMUSIC;
+        border-bottom: 5px solid palette.$APPLEMUSIC;
     }
 
     .bandcamp {
-        border-bottom: 5px solid theme.$BANDCAMP;
+        border-bottom: 5px solid palette.$BANDCAMP;
     }
 }
 
@@ -40,6 +43,6 @@
     display: flex;
     flex-direction: "inline";
     justify-content: center;
-    padding: theme.$DOUBLE 0 theme.$DOUBLE 0;
-    padding-bottom: theme.$SEXTUPLE;
+    padding: spacings.$DOUBLE 0 spacings.$DOUBLE 0;
+    padding-bottom: spacings.$SEXTUPLE;
 }
