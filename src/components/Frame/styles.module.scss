@@ -1,36 +1,39 @@
-@use '../../themes/theme' as theme;
+@use "../../themes/spacings" as spacings;
+@use "../../themes/palette" as palette;
+@use "../../themes/picture-widths" as picture-widths;
+@use "../../themes/breakpoints" as breakpoints;
 
 .frameContainer {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .art {
-  border: 1px solid theme.palette('nardo-grey');
-  border-radius: theme.spacing('full');
+    border: 1px solid palette.$NARDO-GREY;
+    border-radius: spacings.$FULL;
 
-  // Desktop/Large screens
-  @media (min-width: theme.breakpoint('computer')) {
-    width: theme.picture-widths('computer');
-  }
+    // Desktop/Large screens
+    @media (min-width: breakpoints.$COMPUTER) {
+        width: picture-widths.$COMPUTER;
+    }
 
-  // Small desktop/Large tablet
-  @media (min-width: theme.breakpoint('tablet')) and (max-width: theme.breakpoint('computer')) {
-    width: theme.picture-widths('computer');
-  }
+    // Small desktop/Large tablet
+    @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
+        width: picture-widths.$COMPUTER;
+    }
 
-  // Tablet
-  @media (min-width: theme.breakpoint('smartphone')) and (max-width: theme.breakpoint('tablet')) {
-    width: theme.picture-widths('tablet');
-  }
+    // Tablet
+    @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
+        width: picture-widths.$TABLET;
+    }
 
-  // Large mobile
-  @media (min-width: theme.breakpoint('flipphone')) and (max-width: theme.breakpoint('smartphone')) {
-    width: theme.picture-widths('smartphone');
-  }
+    // Large mobile
+    @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
+        width: picture-widths.$SMARTPHONE;
+    }
 
-  // Small mobile
-  @media (max-width: theme.breakpoint('flipphone')) {
-    width: theme.picture-widths('flipphone');
-  }
+    // Small mobile
+    @media (max-width: breakpoints.$FLIPPHONE) {
+        width: picture-widths.$FLIPPHONE;
+    }
 }
