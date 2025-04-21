@@ -1,5 +1,6 @@
-import Exhibit from "#/components/Exhibit";
-
+import discography from "#/data/music/discography.json";
+import Frame from "#/components/Frame";
+import LearnMore from "#/components/LearnMore"
 
 
 import "./global.css"
@@ -10,7 +11,8 @@ const Home = () => {
     return (
         <>
             <main className={styles.main}>
-                <Exhibit id="SYSTEMSTHINKING"/>
+            <Frame />
+            <LearnMore id="SYSTEMSTHINKING"/>
             </main>
         </>
     );

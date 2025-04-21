@@ -20,11 +20,6 @@ const Exhibit = ({ id }: ExhibitProps) => {
           {featured?.title}
         </h2> 
         <DistroBar id="SYSTEMSTHINKING"/>
-        {/* {featured?.credit && (
-          <p className={styles.credits}>
-            {featured?.credit}
-          </p>
-        )} */}
         <p className={styles.infoDetail}>
           <img className={styles.infoIcon} src="/info.png" alt="information icon" />
           {featured?.description}

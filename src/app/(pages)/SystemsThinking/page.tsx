@@ -7,7 +7,7 @@ import Footer from "#/components/Footer/Footer";
 // import styles from "./styles.module.scss";
 
 
-const StytemsThinking = () => {
+const SystemsThinking = () => {
     return (
         <>           
                 <Exhibit id="SYSTEMSTHINKING"/>
@@ -15,4 +15,4 @@ const StytemsThinking = () => {
     );
 };
 
-export default StytemsThinking;
+export default SystemsThinking;
