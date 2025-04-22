@@ -1,5 +1,6 @@
 import discography from "#/data/music/discography.json";
 import styles from "./styles.module.scss";
+import CallToAction from "#/components/CallToAction";
 
 import { LearnMoreProps } from "./types";
 
@@ -14,9 +15,9 @@ const LearnMore = ({ id }: LearnMoreProps) => {
           src="/info.png"
           alt="information icon"
         />
-        {featured?.short}...
+        {featured?.short}{"..."}
       </p>
-      
+      <CallToAction text="hello" link={"/SystemsThinking"}/>
     </div>
   );
 };

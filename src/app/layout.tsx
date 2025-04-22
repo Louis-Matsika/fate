@@ -14,8 +14,8 @@ export default function RootLayout({
         <Header />
         <html lang="en">
             <body className={styles.appBody}>{children}</body>
-            <Footer />
         </html>
+        <Footer />
         </>
     );
 }

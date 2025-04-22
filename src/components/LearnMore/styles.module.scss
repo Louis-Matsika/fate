@@ -24,4 +24,11 @@
             width: 33%;
         }
     }
+
+    .CallToAction {
+        margin-top: spacings.$FULL;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
