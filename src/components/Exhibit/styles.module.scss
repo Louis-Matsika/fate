@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: spacings.$FULL;
+    padding-top: spacings.$TRIPLE;
 }
 
 .frame {
@@ -41,7 +41,6 @@
 
 .infoDetail {
     width: 70%;
-    margin-top: spacings.$FULL;
     white-space: pre-line;
     text-align: justify;
     text-justify: inter-word;
@@ -50,3 +49,27 @@
         width: 33%;
     }
 }
+
+.learnMore {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .infoIcon {
+        width: picture-widths.$ICON-SMALL;
+        margin-right: 4px;
+    }
+    
+
+    .CallToAction {
+        margin-top: spacings.$FULL;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ctaWrapper {
+        padding-top: spacings.$DOUBLE;
+    }
+}
+

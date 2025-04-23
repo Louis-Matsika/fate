@@ -10,7 +10,7 @@ import Footer from "#/components/Footer/Footer";
 const SystemsThinking = () => {
     return (
         <>           
-                <Exhibit id="SYSTEMSTHINKING"/>
+                <Exhibit id="SYSTEMSTHINKING" fullDescription={true}/>
         </>
     );
 };
