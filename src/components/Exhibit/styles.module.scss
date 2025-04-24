@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: spacings.$FULL;
+    padding-top: spacings.$TRIPLE;
 }
 
 .frame {
@@ -41,12 +41,56 @@
 
 .infoDetail {
     width: 70%;
-    margin-top: spacings.$FULL;
     white-space: pre-line;
     text-align: justify;
     text-justify: inter-word;
+    
+     // Desktop/Large screens
+     @media (min-width: breakpoints.$COMPUTER) {
+        width: picture-widths.$COMPUTER;
+    }
 
-    @media (min-width: breakpoints.$COMPUTER) {
-        width: 33%;
+    // Small desktop/Large tablet
+    @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
+        width: picture-widths.$COMPUTER;
+    }
+
+    // Tablet
+    @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
+        width: picture-widths.$TABLET;
+    }
+
+    // Large mobile
+    @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
+        width: picture-widths.$SMARTPHONE;
+    }
+
+    // Small mobile
+    @media (max-width: breakpoints.$FLIPPHONE) {
+        width: picture-widths.$FLIPPHONE;
     }
 }
+
+.learnMore {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .infoIcon {
+        width: picture-widths.$ICON-SMALL;
+        margin-right: 4px;
+    }
+    
+
+    .CallToAction {
+        margin-top: spacings.$FULL;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ctaWrapper {
+        padding-top: spacings.$DOUBLE;
+    }
+}
+
