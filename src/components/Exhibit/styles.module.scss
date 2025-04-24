@@ -44,9 +44,30 @@
     white-space: pre-line;
     text-align: justify;
     text-justify: inter-word;
+    
+     // Desktop/Large screens
+     @media (min-width: breakpoints.$COMPUTER) {
+        width: picture-widths.$COMPUTER;
+    }
 
-    @media (min-width: breakpoints.$COMPUTER) {
-        width: 33%;
+    // Small desktop/Large tablet
+    @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
+        width: picture-widths.$COMPUTER;
+    }
+
+    // Tablet
+    @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
+        width: picture-widths.$TABLET;
+    }
+
+    // Large mobile
+    @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
+        width: picture-widths.$SMARTPHONE;
+    }
+
+    // Small mobile
+    @media (max-width: breakpoints.$FLIPPHONE) {
+        width: picture-widths.$FLIPPHONE;
     }
 }
 
