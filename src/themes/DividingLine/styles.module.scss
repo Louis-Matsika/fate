@@ -1,0 +1,41 @@
+@use "../../themes/spacings" as spacings;
+@use "../../themes/palette" as palette;
+@use "../../themes/picture-widths" as picture-widths;
+@use "../../themes/breakpoints.scss";
+
+
+.DividingLine {
+  padding-top: spacings.$FULL;
+    margin: 0 auto;
+    display: block;
+    border-top: 1px solid palette.$NARDO-GREY;
+    padding: spacings.$DOUBLE 0 spacings.$DOUBLE 0;
+
+
+
+  @media (min-width: breakpoints.$COMPUTER) {
+    width: picture-widths.$COMPUTER;
+  }
+
+  // Small desktop/Large tablet
+  @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
+    width: picture-widths.$COMPUTER;
+  }
+
+  // Tablet
+  @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
+    width: picture-widths.$TABLET;
+  }
+
+  // Large mobile
+  @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
+    width: picture-widths.$SMARTPHONE;
+  }
+
+  // Small mobile
+  @media (max-width: breakpoints.$FLIPPHONE) {
+    width: picture-widths.$FLIPPHONE;
+  }
+
+
+}

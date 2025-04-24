@@ -15,13 +15,12 @@
 
         transform: scale(1.05); 
         transition: all 0.3s ease; 
+        text-decoration: underline;
+        text-decoration-color: palette.$CANVAS;
     }
 
     
     p{
         color: palette.$CANVAS;
-        &:hover {
-            text-decoration: underline;
-        }
     }
 }
