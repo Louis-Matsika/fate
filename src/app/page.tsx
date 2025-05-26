@@ -3,6 +3,7 @@
 import Exhibit from "#/components/Exhibit";
 import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
 import DividingLine from "#/themes/DividingLine/DividingLine";
+import AboutBar from "#/components/AboutBar";
 
 import "./global.css";
 import styles from "./styles.module.scss";
@@ -20,6 +21,7 @@ const Home = () => {
             ContentType="musicVideo"
           />
         </div>
+        <AboutBar />
       </main>
     </>
   );
