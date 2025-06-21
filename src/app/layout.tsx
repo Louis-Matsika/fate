@@ -11,11 +11,13 @@ export default function RootLayout({
 }>) {
     return (
         <>
-        <Header />
         <html lang="en">
-            <body className={styles.appBody}>{children}</body>
+            <body className={styles.appBody}>
+                <Header />
+            {children}
+                <Footer />
+            </body>
         </html>
-        <Footer />
         </>
     );
 }
