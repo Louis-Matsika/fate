@@ -1,18 +1,17 @@
 @use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
 @use "../../themes/picture-widths" as picture-widths;
 @use "../../themes/breakpoints" as breakpoints;
 
-.frameContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.art {
-    border: 1px solid palette.$NARDO-GREY;
-
-    // Desktop/Large screens
-    @media (min-width: breakpoints.$COMPUTER) {
+.textBlock {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: pre-line;
+    text-align: left;
+    text-justify: auto;
+    
+     // Desktop/Large screens
+     @media (min-width: breakpoints.$COMPUTER) {
         width: picture-widths.$COMPUTER;
     }
 
@@ -31,8 +30,5 @@
         width: picture-widths.$SMARTPHONE;
     }
 
-    // Small mobile
-    @media (max-width: breakpoints.$FLIPPHONE) {
-        width: picture-widths.$FLIPPHONE;
-    }
 }
+

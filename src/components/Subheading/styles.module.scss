@@ -1,0 +1,6 @@
+@use "../../themes/spacings" as spacings;
+
+.Subheading {
+  padding-block: spacings.$DOUBLE;
+  margin: 0;
+}

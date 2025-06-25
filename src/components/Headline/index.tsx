@@ -1,11 +1,13 @@
 "use client";
-
 import { useScramble } from "use-scramble";
+
+import { HeadlineProps } from "./types";
+
 import styles from "./styles.module.scss";
 
-const ArtistBrand = () => {
+const Headline = ({ text}: HeadlineProps) => {
   const { ref, replay } = useScramble({
-    text: "SAI's fate.",
+    text: `${text}`,
     speed: 0.1,
     step: 1,
   });
@@ -13,13 +15,13 @@ const ArtistBrand = () => {
   return (
     <h1
       className={styles.artistBrand}
-      ref={ref} // Attach the ref to the element
-      onMouseOver={replay} // Trigger replay on hover
-      onFocus={replay} // Trigger replay on focus
+      ref={ref}
+      onMouseOver={replay}
+      onFocus={replay}
     >
-      SAI's fate.
+      ⠕
     </h1>
   );
 };
 
-export default ArtistBrand;
+export default Headline;

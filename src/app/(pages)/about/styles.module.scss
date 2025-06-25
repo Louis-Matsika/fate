@@ -1,16 +1,21 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
-@use "../../themes/picture-widths" as picture-widths;
-@use "../../themes/breakpoints.scss";
+@use "~/src/themes/breakpoints" as breakpoints;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/spacings";
 
-.DividingLine {
-  margin: spacings.$DOUBLE auto;
-  width: 100%;
-  position: relative;
-  height: 1px;
-  background: palette.$NARDO-GREY;
-  border: none;
+.headLine {
+  padding-bottom: spacings.$TRIPLE;
+}
 
+.infoDetail {
+  padding-top: spacings.$DOUBLE;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-line;
+  text-align: justify;
+  text-justify: inter-word;
+
+  // Desktop/Large screens
   @media (min-width: breakpoints.$COMPUTER) {
     width: picture-widths.$COMPUTER;
   }

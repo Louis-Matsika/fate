@@ -1,0 +1,8 @@
+@use "../../themes/spacings" as spacings;
+
+.artistBrand {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: spacings.$TRIPLE;
+}

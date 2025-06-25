@@ -3,94 +3,89 @@
 @use "../../themes/breakpoints" as breakpoints;
 
 .exhibit {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: spacings.$TRIPLE;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .frame {
-    margin-bottom: 400px;
-    background-color: #e00a5a;
+  margin-bottom: 400px;
+  background-color: #e00a5a;
 }
 
 .infoPlaque {
-    padding-bottom: spacings.$QUADRUPLE;
-    margin: 0;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.title {
-    padding-top: 0;
-    padding-bottom: spacings.$FULL;
-    margin: 0;
-}
+
 
 .credits {
-    padding-top: 0;
-    margin: 0;
+  padding-top: 0;
+  margin: 0;
 }
 
 .infoIcon {
-    width: picture-widths.$ICON-SMALL;
-    margin-right: 4px;
+  width: picture-widths.$ICON-SMALL;
+  margin-right: 4px;
 }
 
 .infoDetail {
-    width: 70%;
+  width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     white-space: pre-line;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
+    text-justify: auto;
     
-     // Desktop/Large screens
-     @media (min-width: breakpoints.$COMPUTER) {
-        width: picture-widths.$COMPUTER;
-    }
 
-    // Small desktop/Large tablet
-    @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
-        width: picture-widths.$COMPUTER;
-    }
+  // Desktop/Large screens
+  @media (min-width: breakpoints.$COMPUTER) {
+    width: picture-widths.$COMPUTER;
+  }
 
-    // Tablet
-    @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
-        width: picture-widths.$TABLET;
-    }
+  // Small desktop/Large tablet
+  @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
+    width: picture-widths.$COMPUTER;
+  }
 
-    // Large mobile
-    @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
-        width: picture-widths.$SMARTPHONE;
-    }
+  // Tablet
+  @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
+    width: picture-widths.$TABLET;
+  }
 
-    // Small mobile
-    @media (max-width: breakpoints.$FLIPPHONE) {
-        width: picture-widths.$FLIPPHONE;
-    }
+  // Large mobile
+  @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
+    width: picture-widths.$SMARTPHONE;
+  }
+
+  // Small mobile
+  @media (max-width: breakpoints.$FLIPPHONE) {
+    width: picture-widths.$FLIPPHONE;
+  }
 }
 
 .learnMore {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .infoIcon {
+    width: picture-widths.$ICON-SMALL;
+    margin-right: 4px;
+  }
+
+  .CallToAction {
+    margin-top: spacings.$FULL;
+    width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
+  }
 
-    .infoIcon {
-        width: picture-widths.$ICON-SMALL;
-        margin-right: 4px;
-    }
-    
-
-    .CallToAction {
-        margin-top: spacings.$FULL;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .ctaWrapper {
-        padding-top: spacings.$DOUBLE;
-    }
+  .ctaWrapper {
+    padding-top: spacings.$DOUBLE;
+  }
 }
-
