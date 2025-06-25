@@ -17,10 +17,12 @@
         text-decoration-color: palette.$CANVAS;
     }
     
-    strong{
-        color: palette.$CANVAS;
-        &:visited {
+    a:visited {
+        strong {
             color: palette.$CHARCOAL;
         }
+    }
+    strong {
+        color: palette.$CANVAS;
     }
 }
