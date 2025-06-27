@@ -42,14 +42,14 @@
     text-justify: auto;
     
 
-  // Desktop/Large screens
-  @media (min-width: breakpoints.$COMPUTER) {
-    width: picture-widths.$COMPUTER;
-  }
+  // // Small mobile
+  // @media (max-width: breakpoints.$FLIPPHONE) {
+  //   width: picture-widths.$FLIPPHONE;
+  // }
 
-  // Small desktop/Large tablet
-  @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
-    width: picture-widths.$COMPUTER;
+  // Large mobile
+  @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
+    width: picture-widths.$SMARTPHONE;
   }
 
   // Tablet
@@ -57,14 +57,14 @@
     width: picture-widths.$TABLET;
   }
 
-  // Large mobile
-  @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
-    width: picture-widths.$SMARTPHONE;
+  // Small desktop/Large tablet
+  @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
+    width: picture-widths.$COMPUTER;
   }
 
-  // Small mobile
-  @media (max-width: breakpoints.$FLIPPHONE) {
-    width: picture-widths.$FLIPPHONE;
+  // Desktop/Large screens
+  @media (min-width: breakpoints.$COMPUTER) {
+    width: picture-widths.$COMPUTER;
   }
 }
 
