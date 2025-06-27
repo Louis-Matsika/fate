@@ -1,34 +1,32 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/picture-widths" as picture-widths;
-@use "../../themes/breakpoints" as breakpoints;
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
 
 .textBlock {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: pre-line;
-    text-align: left;
-    text-justify: auto;
-    
-     // Desktop/Large screens
-     @media (min-width: breakpoints.$COMPUTER) {
-        width: picture-widths.$COMPUTER;
-    }
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-line;
+  text-align: left;
+  text-justify: auto;
 
-    // Small desktop/Large tablet
-    @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
-        width: picture-widths.$COMPUTER;
-    }
+  // Desktop/Large screens
+  @media (min-width: breakpoints.$COMPUTER) {
+    width: picture-widths.$COMPUTER;
+  }
 
-    // Tablet
-    @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
-        width: picture-widths.$TABLET;
-    }
+  // Small desktop/Large tablet
+  @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
+    width: picture-widths.$COMPUTER;
+  }
 
-    // Large mobile
-    @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
-        width: picture-widths.$SMARTPHONE;
-    }
+  // Tablet
+  @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
+    width: picture-widths.$TABLET;
+  }
 
+  // Large mobile
+  @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
+    width: picture-widths.$SMARTPHONE;
+  }
 }
-

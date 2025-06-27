@@ -1,48 +1,48 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
-@use "../../themes/picture-widths" as picture-widths;
-@use "../../themes/breakpoints" as breakpoints;
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/palette" as palette;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
 
 .MusicButton {
-    img {
-        width: picture-widths.$ICON-MEDIUM;
-        padding: spacings.$FULL;
+  img {
+    width: picture-widths.$ICON-MEDIUM;
+    padding: spacings.$FULL;
 
-        // Small mobile
-        @media (max-width: breakpoints.$FLIPPHONE) {
-            width: picture-widths.$ICON-SMALL;
-        }
+    // Small mobile
+    @media (max-width: breakpoints.$FLIPPHONE) {
+      width: picture-widths.$ICON-SMALL;
     }
+  }
 
-    .flare {
-        border-bottom: 5px solid palette.$SYSTEM-BLUE;
-    }
+  .flare {
+    border-bottom: 5px solid palette.$SYSTEM-BLUE;
+  }
 
-    .spotify {
-        border-bottom: 5px solid palette.$SPOTIFY;
-    }
+  .spotify {
+    border-bottom: 5px solid palette.$SPOTIFY;
+  }
 
-    .soundcloud {
-        border-bottom: 5px solid palette.$SOUNDCLOUD;
-    }
+  .soundcloud {
+    border-bottom: 5px solid palette.$SOUNDCLOUD;
+  }
 
-    .youtube {
-        border-bottom: 5px solid palette.$YOUTUBE;
-    }
+  .youtube {
+    border-bottom: 5px solid palette.$YOUTUBE;
+  }
 
-    .applemusic {
-        border-bottom: 5px solid palette.$APPLEMUSIC;
-    }
+  .applemusic {
+    border-bottom: 5px solid palette.$APPLEMUSIC;
+  }
 
-    .bandcamp {
-        border-bottom: 5px solid palette.$BANDCAMP;
-    }
+  .bandcamp {
+    border-bottom: 5px solid palette.$BANDCAMP;
+  }
 }
 
 .distroBar {
-    display: flex;
-    flex-direction: "inline";
-    justify-content: center;
+  display: flex;
+  flex-direction: "inline";
+  justify-content: center;
 
-    padding-bottom: spacings.$SEXTUPLE;
+  padding-bottom: spacings.$SEXTUPLE;
 }

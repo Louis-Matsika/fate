@@ -1,6 +1,6 @@
-@use "~/src/themes/breakpoints" as breakpoints;
+@use "~/src/themes/spacings" as spacings;
 @use "~/src/themes/picture-widths" as picture-widths;
-@use "~/src/themes/spacings";
+@use "~/src/themes/breakpoints" as breakpoints;
 
 .headLine {
   padding-bottom: spacings.$TRIPLE;

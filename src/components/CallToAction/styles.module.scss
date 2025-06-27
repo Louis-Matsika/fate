@@ -1,29 +1,28 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/palette" as palette;
 @use "sass:color";
 
 .callToAction {
-    padding: spacings.$DOUBLE;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: palette.$SYSTEM-BLUE;
-    text-decoration: none;
+  padding: spacings.$DOUBLE;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: palette.$SYSTEM-BLUE;
+  text-decoration: none;
 
-    &:hover {
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    text-decoration: underline;
+    text-decoration-color: palette.$CANVAS;
+  }
 
-        transform: scale(1.05); 
-        transition: all 0.3s ease; 
-        text-decoration: underline;
-        text-decoration-color: palette.$CANVAS;
-    }
-    
-    a:visited {
-        strong {
-            color: palette.$CHARCOAL;
-        }
-    }
+  a:visited {
     strong {
-        color: palette.$CANVAS;
+      color: palette.$CHARCOAL;
     }
+  }
+  strong {
+    color: palette.$CANVAS;
+  }
 }

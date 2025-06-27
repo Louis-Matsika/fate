@@ -1,11 +1,12 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/picture-widths" as picture-widths;
-@use "../../themes/breakpoints" as breakpoints;
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
 
 .exhibit {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-bottom: spacings.$SEXTUPLE;
 }
 
 .frame {
@@ -21,8 +22,6 @@
   flex-direction: column;
 }
 
-
-
 .credits {
   padding-top: 0;
   margin: 0;
@@ -35,28 +34,23 @@
 
 .infoDetail {
   width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: pre-line;
-    text-align: left;
-    text-justify: auto;
-    
-
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-line;
+  text-align: left;
+  text-justify: auto;
 
   @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
     width: picture-widths.$SMARTPHONE;
   }
 
-
   @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
     width: picture-widths.$TABLET;
   }
 
-
   @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
     width: picture-widths.$COMPUTER;
   }
-
 
   @media (min-width: breakpoints.$COMPUTER) {
     width: picture-widths.$COMPUTER;

@@ -1,7 +1,7 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
-@use "../../themes/picture-widths" as picture-widths;
-@use "../../themes/breakpoints" as breakpoints;
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/palette" as palette;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
 
 .frameContainer {
   display: flex;
@@ -9,20 +9,18 @@
 }
 
 .art {
-
-
   // Small mobile
   @media (max-width: breakpoints.$FLIPPHONE) {
     max-width: 100%;
     // border top and bottom
-    border-top: 1px solid palette.$NARDO-GREY;  
+    border-top: 1px solid palette.$NARDO-GREY;
     border-bottom: 1px solid palette.$NARDO-GREY;
   }
 
   // Large mobile
   @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
     max-width: 100%;
-    border-top: 1px solid palette.$NARDO-GREY;  
+    border-top: 1px solid palette.$NARDO-GREY;
     border-bottom: 1px solid palette.$NARDO-GREY;
   }
 

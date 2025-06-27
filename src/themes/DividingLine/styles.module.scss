@@ -1,7 +1,7 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
-@use "../../themes/picture-widths" as picture-widths;
-@use "../../themes/breakpoints.scss";
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/palette" as palette;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
 
 .DividingLine {
   margin: spacings.$DOUBLE auto;
