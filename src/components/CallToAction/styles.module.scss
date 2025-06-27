@@ -15,6 +15,8 @@
     transition: all 0.3s ease;
     text-decoration: underline;
     text-decoration-color: palette.$CANVAS;
+    //glow
+    box-shadow: 0 0 10px color.scale(palette.$SYSTEM-BLUE, $lightness: -20%);
   }
 
   a:visited {

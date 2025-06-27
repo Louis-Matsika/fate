@@ -12,30 +12,63 @@
     @media (max-width: breakpoints.$FLIPPHONE) {
       width: picture-widths.$ICON-SMALL;
     }
+
+    // enlarge on hover
+    &:hover {   
+      transform: scale(1.1);
+      transition: transform 0.1s;
+    }
   }
 
   .flare {
     border-bottom: 5px solid palette.$SYSTEM-BLUE;
+    transition: box-shadow 0.3s;
   }
 
   .spotify {
     border-bottom: 5px solid palette.$SPOTIFY;
+    transition: box-shadow 0.3s;
   }
 
   .soundcloud {
     border-bottom: 5px solid palette.$SOUNDCLOUD;
+    transition: box-shadow 0.3s;
   }
 
   .youtube {
     border-bottom: 5px solid palette.$YOUTUBE;
+    transition: box-shadow 0.3s;
   }
 
   .applemusic {
     border-bottom: 5px solid palette.$APPLEMUSIC;
+    transition: box-shadow 0.3s;
   }
 
   .bandcamp {
     border-bottom: 5px solid palette.$BANDCAMP;
+    transition: box-shadow 0.3s;
+  }
+
+  &:hover {
+    .flare {
+      box-shadow: 0 0 10px palette.$SYSTEM-BLUE;
+    }
+    .spotify {
+      box-shadow: 0 0 10px palette.$SPOTIFY;
+    }
+    .soundcloud {
+      box-shadow: 0 0 10px palette.$SOUNDCLOUD;
+    }
+    .youtube {
+      box-shadow: 0 0 10px palette.$YOUTUBE;
+    }
+    .applemusic {
+      box-shadow: 0 0 10px palette.$APPLEMUSIC;
+    }
+    .bandcamp {
+      box-shadow: 0 0 10px palette.$BANDCAMP;
+    }
   }
 }
 

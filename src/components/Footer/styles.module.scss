@@ -16,5 +16,6 @@
 
   &:hover {
     color: palette.$CHARCOAL;
+    filter: drop-shadow(0 0 1px palette.$GRAPHITE);
   }
 }

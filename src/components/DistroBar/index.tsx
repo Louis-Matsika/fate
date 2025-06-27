@@ -8,7 +8,7 @@ const MusicButton = ({ link, platform }: MusicButtonProps) => {
   return (
     <div className={styles.MusicButton}>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img
+        <img className={`${styles[`${platform}Icon`]}`}
           src={`external-brands/${platform}-icon.svg`}
           alt={`${platform} logo`}
         />
