@@ -1,10 +1,21 @@
 import { FrameProps } from "./types";
 import styles from "./styles.module.scss";
 
-const Frame = ({ src, alt }: FrameProps) => {
+const Frame = ({ src, alt, className }: FrameProps) => {
   return (
-    <div className={styles.frameContainer}>
-      <img className={styles.art} src={`/${src}.png`} height={"auto"} alt={alt} />
+    <div
+      className={
+        className
+          ? `${styles.frameContainer} ${className}`
+          : styles.frameContainer
+      }
+    >
+      <img
+        className={styles.art}
+        src={`/${src}.png`}
+        height={"auto"}
+        alt={alt}
+      />
     </div>
   );
 };

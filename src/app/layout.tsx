@@ -22,7 +22,7 @@ export default function RootLayout({
             {/* Open Graph tags */}
             <meta property="og:title" content="SAI's fate — Music, and Creative Projects" />
             <meta property="og:description" content="Discover the music and creative works of SAI. Listen to tracks, explore albums, and connect with SAI’s artistic journey." />
-            <meta property="og:image" content="https://i.scdn.co/image/ab6761670000ecd413b162c04f042dedb1000f34" />
+            <meta property="og:image" content="" />
             <meta property="og:url" content="https://saisfate.com/" />
         </head>
             <body className={styles.appBody}>

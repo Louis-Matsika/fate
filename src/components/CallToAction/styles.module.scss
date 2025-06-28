@@ -4,7 +4,7 @@
 
 .callToAction {
   padding: spacings.$DOUBLE;
-  display: flex;
+  display: inline-block;
   align-items: center;
   flex-direction: column;
   background-color: palette.$SYSTEM-BLUE;

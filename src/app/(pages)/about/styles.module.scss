@@ -2,6 +2,10 @@
 @use "~/src/themes/picture-widths" as picture-widths;
 @use "~/src/themes/breakpoints" as breakpoints;
 
+.frame {
+  padding-top: spacings.$QUADRUPLE;
+}
+
 .headLine {
   padding-bottom: spacings.$TRIPLE;
 }

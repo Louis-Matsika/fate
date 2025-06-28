@@ -4,6 +4,9 @@ import Exhibit from "#/components/Exhibit";
 import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
 import DividingLine from "#/themes/DividingLine/DividingLine";
 import featured from "#/data/featured.json"
+import Subheading from "#/components/Subheading";
+import Frame from "#/components/Frame";
+import CallToAction from "#/components/CallToAction";
 
 import "./global.css";
 import styles from "./styles.module.scss";
@@ -22,7 +25,15 @@ const Home = () => {
           />
         </div>
         <DividingLine />
-        
+        <Subheading text="Want to know who I am?" />
+        <Frame src={"sai"} alt={`3d portrait of SAI`} className={styles.frame} />
+        <div className={styles.ctaWrapper}>
+          <CallToAction
+            text="visit about page"
+            link="/about"
+            className={styles.callToAction}
+          />
+        </div>
       </main>
     </>
   );

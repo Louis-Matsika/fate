@@ -12,3 +12,13 @@
 .main {
   flex-grow: 1;
 }
+
+.frame {
+  max-width: 800px;
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+  margin: spacings.$TRIPLE;
+}
