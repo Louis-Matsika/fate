@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "title": "The first blog post",
+    "date": "2025-06-28",
+    "text": "This is the first blog post!"
+  },
+  {
+    "id": 1,
+    "title": "Blog Post 2",
+    "date": "2025-06-28",
+    "text": "This is the second blog post."
+  }
+]

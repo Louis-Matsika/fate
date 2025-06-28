@@ -5,7 +5,7 @@ import { HeadlineProps } from "./types";
 
 import styles from "./styles.module.scss";
 
-const Headline = ({ text}: HeadlineProps) => {
+const Headline = ({ text, className}: HeadlineProps) => {
   const { ref, replay } = useScramble({
     text: `${text}`,
     speed: 0.1,
@@ -14,7 +14,7 @@ const Headline = ({ text}: HeadlineProps) => {
 
   return (
     <h1
-      className={styles.artistBrand}
+      className={`${className ? `${styles.headline} ${className}` : styles.headline}`}
       ref={ref}
       onMouseOver={replay}
       onFocus={replay}

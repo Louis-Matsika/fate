@@ -59,6 +59,18 @@
     transition: box-shadow 0.3s;
   }
 
+  .instagram {
+   border-bottom: 5px solid palette.$INSTAGRAM;
+  }
+
+  .discord {
+    border-bottom: 5px solid palette.$DISCORD;
+  }
+
+  .sai {
+    border-bottom: 5px solid palette.$SAI;
+  }
+
   &:hover {
     .flare {
       box-shadow: 0 0 10px palette.$SYSTEM-BLUE;
@@ -77,6 +89,16 @@
     }
     .bandcamp {
       box-shadow: 0 0 10px palette.$BANDCAMP;
+    }
+    .instagram {
+      box-shadow: 0 0 10px palette.$INSTAGRAM;
+    }
+    .discord {
+      box-shadow: 0 0 10px palette.$DISCORD;
+    }
+
+    .sai {
+      box-shadow: 0 0 10px palette.$SAI;
     }
   }
 }

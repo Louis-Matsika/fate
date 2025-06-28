@@ -12,6 +12,8 @@ import { ExhibitProps } from "./types";
 const Exhibit = ({ id, fullDescription }: ExhibitProps) => {
   const featured = discography.find((index) => index.id === id);
 
+  console.log(featured);
+
   const altImageText = `Cover art for ${featured!.title}`;
 
 
@@ -44,7 +46,7 @@ const Exhibit = ({ id, fullDescription }: ExhibitProps) => {
               {featured?.short}{"..."}
             </p>
             <div className={styles.ctaWrapper}>
-      <CallToAction text="learn more" link={`${id}`}/>
+      <CallToAction CTA="learn more" link={`${id}`}/>
           </div>
     </div>)}
       </div>

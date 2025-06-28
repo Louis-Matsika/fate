@@ -5,7 +5,7 @@ import { SubheadingProps } from "./types";
 
 import styles from "./styles.module.scss";
 
-const Subheading = ({ text }: SubheadingProps) => {
+const Subheading = ({ text, className }: SubheadingProps) => {
   const { ref, replay } = useScramble({
     text: `${text}`,
     speed: 0.07,
@@ -14,7 +14,7 @@ const Subheading = ({ text }: SubheadingProps) => {
 
   return (
     <h2
-      className={styles.Subheading}
+      className={`${className ? `${styles.subheading} ${className}` : styles.subheading}`}
       ref={ref}
       onMouseOver={replay}
       onFocus={replay}

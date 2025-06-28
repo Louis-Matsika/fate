@@ -1,0 +1,19 @@
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
+
+.blogPage {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  
+  .heading{
+    padding-bottom: spacings.$FULL;
+  }
+  
+      .subheading {
+        padding-top: 0;
+        padding-bottom: spacings.$DOUBLE;
+        text-align: center;
+      }
+}

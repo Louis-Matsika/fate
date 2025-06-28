@@ -2,12 +2,10 @@
 import Exhibit from "#/components/Exhibit";
 import { useParams } from "next/navigation";
 
-// import "../global.css"
-// import styles from "./styles.module.scss";
-
-const SystemsThinking = () => {
+const discographyItem = () => {
   const params = useParams();
   const discogId = typeof params?.discog === "string" ? params.discog : "";
+  console.log("Discog ID:", discogId);
   return (
     <>
       <Exhibit id={discogId} fullDescription={true} />
@@ -15,4 +13,4 @@ const SystemsThinking = () => {
   );
 };
 
-export default SystemsThinking;
+export default discographyItem;
