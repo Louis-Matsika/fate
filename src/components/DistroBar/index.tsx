@@ -20,7 +20,6 @@ const MusicButton = ({ link, platform }: MusicButtonProps) => {
 
 const DistroBar = ({ id }: DistroBarProps) => {
   const single = discography.find((index) => index.id === id);
-  console.log(single);
 
   return (
     <div className={styles.distroBar}>

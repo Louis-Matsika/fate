@@ -34,19 +34,27 @@
 
   h3 {
     color: palette.$CANVAS;
-    padding: spacings.$DOUBLE 0 spacings.$FULL 0;
+    padding: spacings.$DOUBLE 0 0 0;
     font-size: font-sizes.$H3;
   }
 
   .videoPlaque {
     background-color: palette.$SYSTEM-BLUE;
-    padding-left: spacings.$DOUBLE;
-    padding-right: spacings.$DOUBLE;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .watchDetailsContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .watchIcon {
-    width: picture-widths.$ICON-SMALL;
-    margin-right: spacings.$FULL;
     filter: invert(1);
+    padding: spacings.$DOUBLE;
+    width: picture-widths.$ICON-MEDIUM;
   }
 
   .watchDetails {
@@ -56,6 +64,5 @@
 
     color: palette.$CANVAS;
     padding-bottom: spacings.$DOUBLE;
-    padding-right: spacings.$DOUBLE;
   }
 }

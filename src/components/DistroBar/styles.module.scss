@@ -3,6 +3,15 @@
 @use "~/src/themes/picture-widths" as picture-widths;
 @use "~/src/themes/breakpoints" as breakpoints;
 
+.distroBar {
+  display: flex;
+  flex-direction: "inline";
+  justify-content: center;
+
+  padding-bottom: spacings.$QUADRUPLE;
+}
+
+
 .MusicButton {
   img {
     width: picture-widths.$ICON-MEDIUM;
@@ -70,12 +79,4 @@
       box-shadow: 0 0 10px palette.$BANDCAMP;
     }
   }
-}
-
-.distroBar {
-  display: flex;
-  flex-direction: "inline";
-  justify-content: center;
-
-  padding-bottom: spacings.$SEXTUPLE;
 }

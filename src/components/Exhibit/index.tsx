@@ -11,7 +11,9 @@ import { ExhibitProps } from "./types";
 
 const Exhibit = ({ id, fullDescription }: ExhibitProps) => {
   const featured = discography.find((index) => index.id === id);
+
   const altImageText = `Cover art for ${featured!.title}`;
+
 
   return (
     <div className={styles.exhibit}>
