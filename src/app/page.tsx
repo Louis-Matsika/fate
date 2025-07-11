@@ -33,7 +33,7 @@ const Home = () => {
         />
         <div className={styles.ctaWrapper}>
           <CallToAction
-            CTA="visit about page"
+            CTA="Visit about page"
             link="/about"
             className={styles.callToAction}
           />

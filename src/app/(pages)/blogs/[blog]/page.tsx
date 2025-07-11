@@ -5,8 +5,9 @@ import blogs from "#/data/sai/blogs.json";
 import Headline from "#/components/Headline";
 import Subheading from "#/components/Subheading";
 import TextBlock from "#/components/TextBlock";
-import styles from "./styles.module.scss";
 import VideoEmbed from "#/components/VideoEmbed/VideoEmbed";
+
+import styles from "./styles.module.scss";
 
 const SystemsThinking = () => {
   const params = useParams();
@@ -20,7 +21,6 @@ const SystemsThinking = () => {
       <VideoEmbed
         VideoId={blog.videoId}
         title={blog.title}
-        ContentType="musicVideo"
         className={styles.videoEmbed}
       />
       <TextBlock className={styles.textBlock}>{blog.text}</TextBlock>

@@ -46,7 +46,7 @@ const Exhibit = ({ id, fullDescription }: ExhibitProps) => {
               {featured?.short}{"..."}
             </p>
             <div className={styles.ctaWrapper}>
-      <CallToAction CTA="learn more" link={`${id}`}/>
+      <CallToAction CTA="Learn more" link={`${id}`}/>
           </div>
     </div>)}
       </div>
