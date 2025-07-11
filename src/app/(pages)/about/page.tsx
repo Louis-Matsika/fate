@@ -13,7 +13,7 @@ import TextBlock from "#/components/TextBlock";
 
 const AboutPage = () => {
   return (
-    <div className={styles.aboutPage}>
+    <div>
       <Headline text={"Hi, I'm SAI"} className={styles.headLine} />
       <Frame src={"sai"} alt={`3d portrait of SAI`} className={styles.frame} />
       <TextBlock>{sai.about}</TextBlock>
