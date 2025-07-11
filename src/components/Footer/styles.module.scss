@@ -1,20 +1,21 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
-@use "../../themes/font-sizes" as font-sizes;
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/palette" as palette;
+@use "~/src/themes/font-sizes" as font-sizes;
 
 .footer {
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid palette.$NARDO-GREY;
-    padding: spacings.$DOUBLE 0 spacings.$DOUBLE 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid palette.$NARDO-GREY;
+  padding: spacings.$DOUBLE 0 spacings.$DOUBLE 0;
 }
 
 .link {
-    text-decoration: none;
-    font-size: font-sizes.$BARCODE;
-    color: palette.$GRAPHITE;
+  text-decoration: none;
+  font-size: font-sizes.$BARCODE;
+  color: palette.$GRAPHITE;
 
-    &:hover {
-        color: palette.$CHARCOAL;
-    }
+  &:hover {
+    color: palette.$CHARCOAL;
+    filter: drop-shadow(0 0 1px palette.$GRAPHITE);
+  }
 }

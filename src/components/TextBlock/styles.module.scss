@@ -1,16 +1,16 @@
 @use "~/src/themes/spacings" as spacings;
-@use "~/src/themes/palette" as palette;
 @use "~/src/themes/picture-widths" as picture-widths;
 @use "~/src/themes/breakpoints" as breakpoints;
 
-.DividingLine {
-  margin: spacings.$DOUBLE auto;
-  width: 100%;
-  position: relative;
-  height: 1px;
-  background: palette.$NARDO-GREY;
-  border: none;
+.textBlock {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-line;
+  text-align: left;
+  text-justify: auto;
 
+  // Desktop/Large screens
   @media (min-width: breakpoints.$COMPUTER) {
     width: picture-widths.$COMPUTER;
   }
@@ -28,10 +28,5 @@
   // Large mobile
   @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
     width: picture-widths.$SMARTPHONE;
-  }
-
-  // Small mobile
-  @media (max-width: breakpoints.$FLIPPHONE) {
-    width: picture-widths.$FLIPPHONE;
   }
 }

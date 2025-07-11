@@ -1,14 +1,18 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
-@use "../../themes/picture-widths" as picture-widths;
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/palette" as palette;
+@use "~/src/themes/picture-widths" as picture-widths;
 
 .header {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid palette.$NARDO-GREY;
-    padding: spacings.$DOUBLE 0 spacings.$DOUBLE 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid palette.$NARDO-GREY;
+  padding: spacings.$DOUBLE 0 spacings.$DOUBLE 0;
+
 }
 
 .omoBrand {
-    width: picture-widths.$ICON-SMALL;
+  width: picture-widths.$ICON-SMALL;
+  &:hover {
+    filter: drop-shadow(0 0 1px palette.$GRAPHITE);
+  }
 }

@@ -1,39 +1,44 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
-@use "../../themes/picture-widths" as picture-widths;
-@use "../../themes/breakpoints" as breakpoints;
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/palette" as palette;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
 
 .frameContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .art {
+  // Small mobile
+  @media (max-width: breakpoints.$FLIPPHONE) {
+    max-width: 100%;
+    // border top and bottom
+    border-top: 1px solid palette.$NARDO-GREY;
+    border-bottom: 1px solid palette.$NARDO-GREY;
+  }
+
+  // Large mobile
+  @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
+    max-width: 100%;
+    border-top: 1px solid palette.$NARDO-GREY;
+    border-bottom: 1px solid palette.$NARDO-GREY;
+  }
+
+  // Tablet
+  @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
+    max-width: picture-widths.$TABLET;
     border: 1px solid palette.$NARDO-GREY;
-    border-radius: spacings.$FULL;
+  }
 
-    // Desktop/Large screens
-    @media (min-width: breakpoints.$COMPUTER) {
-        width: picture-widths.$COMPUTER;
-    }
+  // Small desktop/Large tablet
+  @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
+    max-width: picture-widths.$COMPUTER;
+    border: 1px solid palette.$NARDO-GREY;
+  }
 
-    // Small desktop/Large tablet
-    @media (min-width: breakpoints.$TABLET) and (max-width: breakpoints.$COMPUTER) {
-        width: picture-widths.$COMPUTER;
-    }
-
-    // Tablet
-    @media (min-width: breakpoints.$SMARTPHONE) and (max-width: breakpoints.$TABLET) {
-        width: picture-widths.$TABLET;
-    }
-
-    // Large mobile
-    @media (min-width: breakpoints.$FLIPPHONE) and (max-width: breakpoints.$SMARTPHONE) {
-        width: picture-widths.$SMARTPHONE;
-    }
-
-    // Small mobile
-    @media (max-width: breakpoints.$FLIPPHONE) {
-        width: picture-widths.$FLIPPHONE;
-    }
+  // Desktop/Large screens
+  @media (min-width: breakpoints.$COMPUTER) {
+    max-width: picture-widths.$COMPUTER;
+    border: 1px solid palette.$NARDO-GREY;
+  }
 }

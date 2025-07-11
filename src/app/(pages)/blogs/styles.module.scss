@@ -1,0 +1,17 @@
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
+@use "~/src/themes/palette" as palette;
+
+.blogsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: spacings.$TRIPLE;
+}
+
+.blogPost{
+
+  margin: spacings.$DOUBLE;
+}

@@ -1,8 +1,8 @@
-@use "../../themes/spacings" as spacings;
-@use "../../themes/palette" as palette;
-@use "../../themes/picture-widths" as picture-widths;
-@use "../../themes/breakpoints.scss";
-@use "../../themes/font-sizes.scss" as font-sizes;
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/palette" as palette;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
+@use "~/src/themes/font-sizes" as font-sizes;
 
 .VideoEmbed {
   margin: 0 auto;
@@ -34,19 +34,27 @@
 
   h3 {
     color: palette.$CANVAS;
-    padding:  spacings.$DOUBLE 0 spacings.$FULL 0;
+    padding: spacings.$DOUBLE 0 0 0;
     font-size: font-sizes.$H3;
   }
 
-  .videoPlaque{
+  .videoPlaque {
     background-color: palette.$SYSTEM-BLUE;
-    padding-left: spacings.$DOUBLE;
-    padding-right: spacings.$DOUBLE;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .watchDetailsContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .watchIcon {
-    width: picture-widths.$ICON-SMALL;
-    margin-right: spacings.$FULL;
     filter: invert(1);
+    padding: spacings.$DOUBLE;
+    width: picture-widths.$ICON-MEDIUM;
   }
 
   .watchDetails {
@@ -56,7 +64,5 @@
 
     color: palette.$CANVAS;
     padding-bottom: spacings.$DOUBLE;
-    padding-right: spacings.$DOUBLE;
-
   }
 }

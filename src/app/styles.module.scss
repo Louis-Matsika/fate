@@ -1,4 +1,4 @@
-@use "../themes/spacings.scss" as spacings;
+@use "~/src/themes/spacings" as spacings;
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
 
@@ -9,10 +9,24 @@
   flex-direction: column;
 }
 
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .main {
   flex-grow: 1;
 }
 
-.VideoEmbedWrapper {
-  margin-bottom: spacings.$DOUBLE;
+.frame {
+  max-width: 800px;
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+  margin: spacings.$TRIPLE;
 }

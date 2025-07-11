@@ -1,0 +1,35 @@
+@use "~/src/themes/spacings" as spacings;
+@use "~/src/themes/picture-widths" as picture-widths;
+@use "~/src/themes/breakpoints" as breakpoints;
+
+.blogPage {
+  justify-content: flex-start; 
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: spacings.$TRIPLE;
+
+  .heading {
+    text-align: left;
+  }
+
+  .videoEmbed {
+    margin: 0;
+    padding-bottom: spacings.$TRIPLE;
+
+  }
+
+  .subheading {
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: spacings.$DOUBLE;
+  }
+
+  .textBlock {
+    text-align: left;
+    padding-bottom: spacings.$TRIPLE;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-left: 0;
+  }
+}

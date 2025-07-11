@@ -1,0 +1,7 @@
+@use "~/src/themes/spacings" as spacings;
+
+.subheading {
+  padding-block: spacings.$DOUBLE;
+  margin: 0;
+  text-align: center;
+}

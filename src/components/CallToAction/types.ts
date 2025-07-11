@@ -1,5 +1,7 @@
 export type CallToActionProps = {
-    text: string;
+    CTA: string;
+    text?: string;
     link: string;
+    className?: string;
   }
   

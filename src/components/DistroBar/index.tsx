@@ -1,14 +1,18 @@
-import styles from "./styles.module.scss";
+import React from "react";
 
 import discography from "#/data/music/discography.json";
+import about from "#/data/sai/about.json";
+
+import styles from "./styles.module.scss";
 
 import { MusicButtonProps, DistroBarProps } from "./types";
 
-const MusicButton = ({ link, platform }: MusicButtonProps) => {
+const LinkButton = ({ link, platform }: MusicButtonProps) => {
   return (
     <div className={styles.MusicButton}>
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img
+          className={`${styles[`${platform}Icon`]}`}
           src={`external-brands/${platform}-icon.svg`}
           alt={`${platform} logo`}
         />
@@ -19,15 +23,24 @@ const MusicButton = ({ link, platform }: MusicButtonProps) => {
 };
 
 const DistroBar = ({ id }: DistroBarProps) => {
-  const single = discography.find((index) => index.id === id);
-  console.log(single);
+  let links = [];
 
+  // If the id is "sai", we use the links from the about data
+  // Otherwise, find the music entry in the discography
+  if (id === "sai") {
+    links = about?.links || [];
+  } else {
+    const music = discography.find((index) => index.id === id);
+    links = music?.links || [];
+  }
   return (
-    <div className={styles.distroBar}>
-      {single?.links?.map((link, key) => (
-        <MusicButton key={key} link={link.link} platform={link.platform} />
-      ))}
-    </div>
+    links && (
+      <div className={styles.distroBar}>
+        {links.map((link, key) => (
+          <LinkButton key={key} link={link.link} platform={link.platform} />
+        ))}
+      </div>
+    )
   );
 };
 
