@@ -3,17 +3,27 @@
 @use "~/src/themes/breakpoints" as breakpoints;
 
 .blogPage {
-  justify-content: center;
+  justify-content: flex-start; 
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  
-  .heading{
-    padding-bottom: spacings.$FULL;
+  padding: spacings.$TRIPLE;
+
+  .heading {
+    text-align: left;
   }
-  
-      .subheading {
-        padding-top: 0;
-        padding-bottom: spacings.$DOUBLE;
-        text-align: center;
-      }
+
+  .subheading {
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: spacings.$DOUBLE;
+  }
+
+  .textBlock {
+    text-align: left;
+    padding-bottom: spacings.$TRIPLE;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-left: 0;
+  }
 }

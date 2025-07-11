@@ -16,7 +16,7 @@ const SystemsThinking = () => {
     <div className={styles.blogPage}>
       <Headline text={blog.title} className={styles.headline} />
       <Subheading text={blog.date} className={styles.subheading} />
-      <TextBlock>{blog.text}</TextBlock>
+      <TextBlock className={styles.textBlock}>{blog.text}</TextBlock>
     </div>
   );
 };
