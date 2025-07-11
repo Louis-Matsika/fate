@@ -6,9 +6,9 @@ import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 import { VideoEmbedProps } from "./types";
 
-const VideoEmbed = ({ VideoId, title, ContentType }: VideoEmbedProps) => {
+const VideoEmbed = ({ VideoId, title, ContentType, className }: VideoEmbedProps) => {
   return (
-    <div className={styles.VideoEmbed}>
+    <div className={`${styles.VideoEmbed} ${className}`}>
       <LiteYouTubeEmbed id={VideoId} title={title} />
       {ContentType === "musicVideo" && (
         <div className={styles.videoPlaque}>

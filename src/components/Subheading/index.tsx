@@ -14,7 +14,7 @@ const Subheading = ({ text, className }: SubheadingProps) => {
 
   return (
     <h2
-      className={`${className ? `${styles.subheading} ${className}` : styles.subheading}`}
+      className={`${className} ${styles.subheading}`}
       ref={ref}
       onMouseOver={replay}
       onFocus={replay}
