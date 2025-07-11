@@ -10,7 +10,7 @@ const BlogPage = () => {
   return (
     <div className={styles.blogsPage}>
       <Headline text={"Blogs"} />
-      <div className={styles.blogsList}>
+      <div>
         {[...blogs].reverse().map((blog) => (
           <div key={blog.id}>
             <CallToAction CTA={blog.title} link={`/blogs/${blog.id}`} className={styles.blogPost} />
