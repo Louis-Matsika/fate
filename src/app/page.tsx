@@ -19,8 +19,8 @@ const Home = () => {
         <DividingLine />
         <div className={styles.VideoEmbedWrapper}>
           <VideoEmbed
-            VideoId="06rkItPZ3ks"
-            title="falconDoors."
+            VideoId="iEZd_AXVA9Y"
+            title="'HELLO WORLD!'"
             ContentType="musicVideo"
           />
         </div>
