@@ -1,7 +1,7 @@
-import Link from 'next/link'
+import Link from "next/link";
 import { CallToActionProps } from "./types";
-import styles from './styles.module.scss';
-import TextBlock from '../TextBlock';
+import styles from "./styles.module.scss";
+import TextBlock from "../TextBlock"; 
 
 const CallToAction = ({ CTA, link, text, className }: CallToActionProps) => {
   return (
@@ -11,6 +11,5 @@ const CallToAction = ({ CTA, link, text, className }: CallToActionProps) => {
     </Link>
   );
 };
-
 
 export default CallToAction;
