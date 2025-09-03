@@ -1,5 +1,6 @@
 import Header from "#/components/Header/Header";
 import Footer from "#/components/Footer/Footer";
+import Script from "next/script";
 
 import "./global.css"
 import styles from "./styles.module.scss";
@@ -25,6 +26,19 @@ export default function RootLayout({
             <meta property="og:image" content="https://i1.sndcdn.com/avatars-w25QY244PCqsouCx-amX68g-t200x200.jpg" />
             <meta property="og:url" content="https://saisfate.com/" />
         </head>
+        {/* Google tag (gtag.js) */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-FHVV07Q6HK"></Script>
+        <Script id="google-analytics">
+            {
+                `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-FHVV07Q6HK');
+                `
+            }
+        </Script>
             <body className={styles.appBody}>
                 <Header />
             {children}
@@ -34,3 +48,4 @@ export default function RootLayout({
         </>
     );
 }
+ 
