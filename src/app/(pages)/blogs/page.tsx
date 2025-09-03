@@ -1,5 +1,6 @@
 import Headline from "#/components/Headline";
-import CallToAction from "#/components/CallToAction";
+import CallToAction from "#/components/CallToAction"; 
+import Link from "next/link";
 
 import blogs from "#/data/sai/blogs.json";
 
