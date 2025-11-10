@@ -1,5 +1,3 @@
-"use client";
-import { useParams } from "next/navigation";
 import DistroBar from "#/components/DistroBar";
 import Headline from "#/components/Headline";
 import Frame from "#/components/Frame";

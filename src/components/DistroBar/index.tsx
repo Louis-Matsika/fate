@@ -1,46 +1,52 @@
-import React from "react";
+import Image from "next/image";
 
-import discography from "#/data/music/discography.json";
 import about from "#/data/sai/about.json";
+import discography from "#/data/music/discography.json";
 
 import styles from "./styles.module.scss";
 
-import { MusicButtonProps, DistroBarProps } from "./types";
+import { DistroBarProps, MusicButtonProps } from "./types";
+
+const ICON_DIMENSIONS = {
+  width: 64,
+  height: 64,
+};
 
 const LinkButton = ({ link, platform }: MusicButtonProps) => {
+  const flareClassName = styles[platform] ?? styles.flare;
+
   return (
     <div className={styles.MusicButton}>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img
-          className={`${styles[`${platform}Icon`]}`}
-          src={`external-brands/${platform}-icon.svg`}
+        <Image
+          className={styles.icon}
+          src={`/external-brands/${platform}-icon.svg`}
           alt={`${platform} logo`}
+          {...ICON_DIMENSIONS}
+          loading="lazy"
         />
-        <div className={`${styles.flare} ${styles[platform]}`}></div>
+        <div className={`${styles.flare} ${flareClassName}`} />
       </a>
     </div>
   );
 };
 
 const DistroBar = ({ id }: DistroBarProps) => {
-  let links = [];
+  const links =
+    id === "sai"
+      ? about.links ?? []
+      : discography.find((item) => item.id === id)?.links ?? [];
 
-  // If the id is "sai", we use the links from the about data
-  // Otherwise, find the music entry in the discography
-  if (id === "sai") {
-    links = about?.links || [];
-  } else {
-    const music = discography.find((index) => index.id === id);
-    links = music?.links || [];
+  if (!links.length) {
+    return null;
   }
+
   return (
-    links && (
-      <div className={styles.distroBar}>
-        {links.map((link, key) => (
-          <LinkButton key={key} link={link.link} platform={link.platform} />
-        ))}
-      </div>
-    )
+    <div className={styles.distroBar}>
+      {links.map((link) => (
+        <LinkButton key={link.platform} link={link.link} platform={link.platform} />
+      ))}
+    </div>
   );
 };
 

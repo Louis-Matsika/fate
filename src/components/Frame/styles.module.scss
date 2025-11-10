@@ -6,9 +6,12 @@
 .frameContainer {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .art {
+  width: 100%;
+  height: auto;
   // Small mobile
   @media (max-width: breakpoints.$FLIPPHONE) {
     max-width: 100%;

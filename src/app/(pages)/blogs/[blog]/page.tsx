@@ -1,18 +1,45 @@
-"use client";
-import { useParams } from "next/navigation";
+import dynamic from "next/dynamic";
+import { notFound } from "next/navigation";
 
-import blogs from "#/data/sai/blogs.json";
 import Headline from "#/components/Headline";
 import Subheading from "#/components/Subheading";
 import TextBlock from "#/components/TextBlock";
-import VideoEmbed from "#/components/VideoEmbed/VideoEmbed";
+import blogs from "#/data/sai/blogs.json";
 
 import styles from "./styles.module.scss";
 
-const SystemsThinking = () => {
-  const params = useParams();
-  const blogId = Number(typeof params?.blog === "string" ? params.blog : "");
-  const blog = blogs[blogId];
+type BlogPageProps = {
+  params: {
+    blog: string;
+  };
+};
+
+const VideoEmbed = dynamic(
+  () => import("#/components/VideoEmbed/VideoEmbed"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className={styles.videoPlaceholder} aria-label="Loading video…" />
+    ),
+  },
+);
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return blogs.map((entry) => ({
+    blog: entry.id.toString(),
+  }));
+}
+
+const BlogEntry = ({ params }: BlogPageProps) => {
+  const blog = blogs.find(
+    (entry) => entry.id.toString() === params.blog,
+  );
+
+  if (!blog) {
+    notFound();
+  }
 
   return (
     <div className={styles.blogPage}>
@@ -28,4 +55,4 @@ const SystemsThinking = () => {
   );
 };
 
-export default SystemsThinking;
+export default BlogEntry;

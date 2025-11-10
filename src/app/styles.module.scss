@@ -30,3 +30,31 @@
   justify-content: center;
   margin: spacings.$TRIPLE;
 }
+
+.VideoEmbedWrapper {
+  display: flex;
+  justify-content: center;
+  margin: spacings.$DOUBLE;
+}
+
+.videoPlaceholder {
+  width: min(100%, 720px);
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: spacings.$HALF;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.45;
+  }
+}

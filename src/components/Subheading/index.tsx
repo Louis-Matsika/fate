@@ -12,9 +12,13 @@ const Subheading = ({ text, className }: SubheadingProps) => {
     step: 10,
   });
 
+  const composedClassName = className
+    ? `${styles.subheading} ${className}`
+    : styles.subheading;
+
   return (
     <h2
-      className={`${className} ${styles.subheading}`}
+      className={composedClassName}
       ref={ref}
       onMouseOver={replay}
       onFocus={replay}

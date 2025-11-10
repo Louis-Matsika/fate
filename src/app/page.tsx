@@ -1,15 +1,23 @@
-"use client";
+import dynamic from "next/dynamic";
 
 import Exhibit from "#/components/Exhibit";
-import VideoEmbed from "../components/VideoEmbed/VideoEmbed";
 import DividingLine from "#/themes/DividingLine/DividingLine";
 import featured from "#/data/featured.json";
 import Subheading from "#/components/Subheading";
 import Frame from "#/components/Frame";
 import CallToAction from "#/components/CallToAction";
 
-import "./global.css";
 import styles from "./styles.module.scss";
+
+const VideoEmbed = dynamic(
+  () => import("#/components/VideoEmbed/VideoEmbed"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className={styles.videoPlaceholder} aria-label="Loading video…" />
+    ),
+  },
+);
 
 const Home = () => {
   return (

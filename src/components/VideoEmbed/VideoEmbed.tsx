@@ -1,14 +1,19 @@
-import Link from "next/link";
-import styles from "./styles.module.scss";
+'use client';
+
+import Image from "next/image";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
-import React from "react";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import styles from "./styles.module.scss";
 
 import { VideoEmbedProps } from "./types";
 
 const VideoEmbed = ({ VideoId, title, ContentType, className }: VideoEmbedProps) => {
+  const wrapperClassName = className
+    ? `${styles.VideoEmbed} ${className}`
+    : styles.VideoEmbed;
+
   return (
-    <div className={`${styles.VideoEmbed} ${className}`}>
+    <div className={wrapperClassName}>
       <LiteYouTubeEmbed id={VideoId} title={title} />
       {ContentType === "musicVideo" && (
         <div className={styles.videoPlaque}>
@@ -18,10 +23,13 @@ const VideoEmbed = ({ VideoId, title, ContentType, className }: VideoEmbedProps)
               {`new music video out now!`}
             </p>
           </div>
-          <img
+          <Image
             className={styles.watchIcon}
             src="/icons/film.svg"
             alt="watch icon"
+            width={48}
+            height={48}
+            priority={false}
           />
         </div>
       )}
