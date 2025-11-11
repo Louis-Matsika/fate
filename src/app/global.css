@@ -8,6 +8,8 @@
 
 body {
     font-family: "Roboto Flex", sans-serif;
+    background-color: #ffff;
+    color: #000000;
 }
 
 footer a {

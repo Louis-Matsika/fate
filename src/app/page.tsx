@@ -15,29 +15,7 @@ const Home = () => {
   return (
     <div className={styles.homepage}>
       <main className={styles.main}>
-        <Exhibit id={featured.id} fullDescription={false} />
-        <DividingLine />
-        <div className={styles.VideoEmbedWrapper}>
-          <VideoEmbed
-            VideoId="iEZd_AXVA9Y"
-            title="'HELLO WORLD!'"
-            ContentType="musicVideo"
-          />
-        </div>
-        <DividingLine />
-        <Subheading text="Want to know who I am?" />
-        <Frame
-          src={"sai"}
-          alt={`3d portrait of SAI`}
-          className={styles.frame}
-        />
-        <div className={styles.ctaWrapper}>
-          <CallToAction
-            CTA="Visit about page"
-            link="/about"
-            className={styles.callToAction}
-          />
-        </div>
+        <Exhibit id={featured.id} description={false} fullDescription={false} cta={false}/>
       </main>
     </div>
   );
