@@ -8,7 +8,7 @@ const discographyItem = () => {
   console.log("Discog ID:", discogId);
   return (
     <>
-      <Exhibit id={discogId} fullDescription={true} />
+      <Exhibit id={discogId} fullDescription={true} description={true} cta={true}/>
     </>
   );
 };

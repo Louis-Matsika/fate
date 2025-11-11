@@ -9,7 +9,7 @@ import Subheading from "../Subheading";
 import styles from "./styles.module.scss";
 import { ExhibitProps } from "./types";
 
-const Exhibit = ({ id, fullDescription }: ExhibitProps) => {
+const Exhibit = ({ id, fullDescription, description, cta }: ExhibitProps) => {
   const featured = discography.find((index) => index.id === id);
 
   const altImageText = `Cover art for ${featured!.title}`;
@@ -22,7 +22,7 @@ const Exhibit = ({ id, fullDescription }: ExhibitProps) => {
       <div className={styles.infoPlaque}>
         <Subheading text={featured!.title} />
         <DistroBar id={id} />
-        {fullDescription && (
+        {fullDescription && description && (
           <>
             <p className={styles.infoDetail}>
               <img
@@ -34,7 +34,7 @@ const Exhibit = ({ id, fullDescription }: ExhibitProps) => {
             </p>
           </>
         )}
-        {!fullDescription && (<div className={styles.learnMore}>
+        {!fullDescription && description && (<div className={styles.learnMore}>
             <p className={styles.infoDetail}>
               <img
                 className={styles.infoIcon}
@@ -44,7 +44,7 @@ const Exhibit = ({ id, fullDescription }: ExhibitProps) => {
               {featured?.short}{"..."}
             </p>
             <div className={styles.ctaWrapper}>
-      <CallToAction CTA="Learn more" link={`${id}`}/>
+              {cta && <CallToAction CTA="Learn more" link={`${id}`}/>}
           </div>
     </div>)}
       </div>
