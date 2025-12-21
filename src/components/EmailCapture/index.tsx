@@ -1,17 +1,34 @@
 import { useState } from "react";
+import { supabase } from "#/lib/supabase";
 
 const EmailCapture = () => {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     const target = e.target as typeof e.target & {
       email: { value: string };
     };
 
-    setEmail(target.email.value);
+    const emailValue = target.email.value;
+
+    if (!emailValue || emailValue.trim() === null) {
+      console.error("Email value is empty");
+      return;
+    } else {
+      setEmail(target.email.value);
+    }
 
     console.log(email);
+
+    const { data, error } = await supabase
+      .from("Email List")
+      .insert([{ Email: email }]);
+
+    if (error) {
+      console.error(error.message);
+      return;
+    }
   };
 
   return (
