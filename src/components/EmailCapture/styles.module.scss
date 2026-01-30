@@ -3,7 +3,10 @@
 @use "sass:color";
 
 .EmailCapture {
-  .Subheading
+
+  .HCaptcha{
+    padding-top: spacings.$DOUBLE;
+  }
 
   label {
     display: block;

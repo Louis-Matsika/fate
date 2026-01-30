@@ -95,11 +95,13 @@ const EmailCapture = () => {
           autoComplete="off"
           style={{ display: "none" }}
         />
-        <HCaptcha
-          sitekey={SITE_KEY}
-          onVerify={setCaptchaToken}
-          ref={captchaRef}
-        />
+<div className={styles.HCaptcha}>
+  <HCaptcha
+    sitekey={SITE_KEY}
+    onVerify={setCaptchaToken}
+    ref={captchaRef}
+  />
+</div>
         <input
           type="submit"
           value="Submit"
