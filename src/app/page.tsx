@@ -7,7 +7,7 @@ import featured from "#/data/featured.json";
 import Subheading from "#/components/Subheading";
 import Frame from "#/components/Frame";
 import CallToAction from "#/components/CallToAction";
-import EmailCapature from "#/components/EmailCapture";
+import EmailCapture from "#/components/EmailCapture";
 import "./global.css";
 import styles from "./styles.module.scss";
 
@@ -21,7 +21,8 @@ const Home = () => {
           fullDescription={false}
           cta={false}
         />
-        <EmailCapature />
+        <DividingLine />
+        <EmailCapture />
       </main>
     </div>
   );
