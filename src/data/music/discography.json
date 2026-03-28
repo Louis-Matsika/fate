@@ -1,5 +1,26 @@
 [
   {
+    "id": "metropolis",
+    "title": "METROPOLIS",
+    "releaseDate": "2025-03-27",
+    "short": "My 2nd album.",
+    "description": "⠕",
+    "links": [
+      {
+        "platform": "soundcloud",
+        "link": "https://soundcloud.com/saisfate/sets/metropolis"
+      },
+      {
+        "platform": "spotify",
+        "link": "https://open.spotify.com/album/4lQsmIWEODDjwZNXaHpl1c?si=ujuPIWrNQXWFkZht2azB4A"
+      },
+      {
+        "platform": "youtube",
+        "link": "https://music.youtube.com/playlist?list=OLAK5uy_kg3TBFqmNwinXbDkNgoQduJ5aLB6Hsn8o&si=oO9ptGNSpSdP3a5e"
+      }
+    ]
+  },
+  {
     "id": "spiritofecstasy",
     "title": "Spirit of Ecstasy",
     "releaseDate": "2025-10-23"
