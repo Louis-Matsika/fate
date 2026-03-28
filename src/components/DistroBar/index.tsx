@@ -39,6 +39,11 @@ const DistroBar = ({ id }: DistroBarProps) => {
         {links.map((link, key) => (
           <LinkButton key={key} link={link.link} platform={link.platform} />
         ))}
+        <LinkButton
+          key={"instagram"}
+          link={"https://www.instagram.com/omosaisfate"}
+          platform={"instagram"}
+        />
       </div>
     )
   );
