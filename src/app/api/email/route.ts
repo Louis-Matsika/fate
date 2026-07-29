@@ -22,6 +22,12 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+    if (!HCAPTCHA_SECRET) {
+      return NextResponse.json(
+        { error: "Server captcha configuration missing" },
+        { status: 500 }
+      );
+    }
     const captchaRes = await fetch("https://api.hcaptcha.com/siteverify", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
