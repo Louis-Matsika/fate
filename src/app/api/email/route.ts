@@ -83,11 +83,7 @@ export async function POST(request: NextRequest) {
     );
   } catch (error: any) {
     console.error("Error submitting email:", error);
-    // Provide more specific error messages
-    const errorMessage = error?.message || "Failed to submit email";
-    return NextResponse.json(
-      { error: errorMessage, details: error?.code },
-      { status: 500 }
-    );
+    // Avoid leaking internal error details to clients.
+    return NextResponse.json({ error: "Failed to submit email" }, { status: 500 });
   }
 }
