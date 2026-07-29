@@ -1,13 +1,12 @@
 import { sql } from "#/lib/neon";
 import { NextRequest, NextResponse } from "next/server";
 
-const lastSubmissionByIp = new Map<string, number>();
-const COOLDOWN_MS = 60_000;
+const HCAPTCHA_SECRET = process.env.HCAPTCHA_SECRET_KEY!;
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email } = body;
+    const { email, captchaToken } = body;
 
     // Validate email
     if (!email || typeof email !== "string" || !email.trim()) {
@@ -17,13 +16,40 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Verify hCaptcha token server-side
+    if (!captchaToken) {
+      return NextResponse.json(
+        { error: "Captcha is required" },
+        { status: 400 }
+      );
+    }
+    const captchaRes = await fetch("https://api.hcaptcha.com/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret: HCAPTCHA_SECRET,
+        response: captchaToken,
+      }),
+    });
+    const captchaData = await captchaRes.json();
+    if (!captchaData.success) {
+      return NextResponse.json(
+        { error: "Captcha verification failed" },
+        { status: 403 }
+      );
+    }
+
     const ip: string =
       request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       request.headers.get("x-real-ip") ||
       "unknown";
-    const now = Date.now();
-    const last = lastSubmissionByIp.get(ip);
-    if (last != null && now - last < COOLDOWN_MS) {
+
+    // DB-based rate limiting (survives serverless cold starts)
+    const rateCheck = await sql`
+      SELECT 1 FROM "Rate Limit"
+      WHERE ip = ${ip} AND last_submission > NOW() - INTERVAL '1 minute'
+    `;
+    if (rateCheck.length > 0) {
       return NextResponse.json(
         { error: "Please wait a minute before submitting again." },
         { status: 429 }
@@ -46,7 +72,11 @@ export async function POST(request: NextRequest) {
       ON CONFLICT ("Email") DO NOTHING
     `;
 
-    lastSubmissionByIp.set(ip, now);
+    await sql`
+      INSERT INTO "Rate Limit" (ip, last_submission)
+      VALUES (${ip}, NOW())
+      ON CONFLICT (ip) DO UPDATE SET last_submission = NOW()
+    `;
 
     return NextResponse.json(
       { message: "Email submitted successfully" },

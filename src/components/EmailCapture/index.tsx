@@ -13,7 +13,6 @@ const EmailCapture = () => {
 
   // hCaptcha
   const [captchaToken, setCaptchaToken] = useState("");
-  const [captchaReady, setCaptchaReady] = useState(false);
   const captchaRef = useRef<any>(null);
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
@@ -48,7 +47,7 @@ const EmailCapture = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email: emailValue }),
+        body: JSON.stringify({ email: emailValue, captchaToken }),
       });
 
       const data = await response.json();
@@ -67,9 +66,8 @@ const EmailCapture = () => {
       return;
     }
 
-    // Captcha reset 
-    // captchaRef.current?.resetCaptcha();
-    // setCaptchaToken("");
+    captchaRef.current?.resetCaptcha();
+    setCaptchaToken("");
   };
 
   return (
@@ -79,7 +77,7 @@ const EmailCapture = () => {
         text="Sign up to my newsletter!"
       />
       <form onSubmit={handleSubmit}>
-        <label htmlFor="usernameInput">Enter Email:</label>
+        <label htmlFor="email-input">Enter Email:</label>
         <input
           type="email"
           name="email"

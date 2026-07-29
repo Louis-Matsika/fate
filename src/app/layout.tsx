@@ -39,15 +39,7 @@ export default function RootLayout({
             content="https://i1.sndcdn.com/avatars-w25QY244PCqsouCx-amX68g-t200x200.jpg"
           />
           <meta property="og:url" content="https://saisfate.com/" />
-          <link
-            rel="preconnect"
-            href="https://challenges.cloudflare.com"
-          ></link>
-          <script
-            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-            async
-            defer
-          ></script>
+
         </head>
         <body className={styles.appBody}>
           <Script
