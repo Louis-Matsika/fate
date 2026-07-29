@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import HCaptcha from "@hcaptcha/react-hcaptcha"; // Commented out for testing
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import styles from "./styles.module.scss";
 import TextBlock from "../TextBlock";
 import Subheading from "../Subheading";
