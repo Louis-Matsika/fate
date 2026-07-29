@@ -1,7 +1,7 @@
 import { sql } from "#/lib/neon";
 import { NextRequest, NextResponse } from "next/server";
 
-const HCAPTCHA_SECRET = process.env.HCAPTCHA_SECRET_KEY!;
+const HCAPTCHA_SECRET = process.env.HCAPTCHA_SECRET_KEY;
 
 export async function POST(request: NextRequest) {
   try {
