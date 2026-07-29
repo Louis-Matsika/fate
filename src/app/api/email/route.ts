@@ -64,6 +64,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // insert email into data base
     await sql`
       INSERT INTO "Email List" ("Email")
       VALUES (${email.trim()})
