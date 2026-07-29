@@ -8,7 +8,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { email, captchaToken } = body;
 
-    // Validate email
     if (!email || typeof email !== "string" || !email.trim()) {
       return NextResponse.json(
         { error: "Email is required" },
