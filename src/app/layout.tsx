@@ -16,7 +16,7 @@ export default function RootLayout({
       <html lang="en">
         <head>
           <title>SAI's fate. — Music, and Creative Projects</title>
-          <link rel="icon" href="icons/OMOcloud favicon.ico" />
+          <link rel="icon" href="/icons/OMOcloud%20favicon.ico" />
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
