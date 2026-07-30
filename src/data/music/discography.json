@@ -1,5 +1,19 @@
 [
   {
+    "id": "fabl",
+    "title": "FABL",
+    "links": [
+      {
+        "platform": "soundcloud",
+        "link": "https://soundcloud.com/saisfate/sets/fabl"
+      },
+      {
+        "platform": "spotify",
+        "link": "https://open.spotify.com/album/1Bf37bXzexZuO89LAgoLEw?si=x_SN8XipQIifI5rCteGP0g"
+      }
+    ]
+  },
+  {
     "id": "metropolis",
     "title": "METROPOLIS",
     "releaseDate": "2025-03-27",
