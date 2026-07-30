@@ -10,12 +10,15 @@ const Frame = ({ src, alt, className }: FrameProps) => {
           : styles.frameContainer
       }
     >
-      <img
-        className={styles.art}
-        src={`/${src}.png`}
-        height={"auto"}
-        alt={alt}
-      />
+      <picture>
+        <source srcSet={`/${src}.webp`} type="image/webp" />
+        <img
+          className={styles.art}
+          src={`/${src}.png`}
+          height={"auto"}
+          alt={alt}
+        />
+      </picture>
     </div>
   );
 };
